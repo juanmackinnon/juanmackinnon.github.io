@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anti Procrastinación - Generá el primer paso de tu tarea y empezá ahora">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Anti Procrastinación">
+    
+    <title>Anti Procrastinación</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%23000' width='192' height='192'/><text x='96' y='120' font-size='140' font-weight='bold' fill='%23fff' text-anchor='middle' font-family='sans-serif'>▶</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%23000' width='180' height='180' rx='40'/><text x='90' y='130' font-size='100' font-weight='bold' fill='%23fff' text-anchor='middle' font-family='sans-serif'>▶</text></svg>">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- HEADER CON THEME TOGGLE -->
+        <header class="header">
+            <h1 class="logo">Anti Procrastinación</h1>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                <span class="theme-icon">◐</span>
+            </button>
+        </header>
+ 
+        <!-- SECCIÓN ENTRADA DE TAREA -->
+        <section class="task-input-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="task-input" 
+                    class="task-input" 
+                    placeholder="¿Qué tenés que hacer?"
+                    autocomplete="off"
+                >
+                <button id="generate-btn" class="btn btn-primary">
+                    Generar primer paso
+                </button>
+            </div>
+            
+            <!-- EJEMPLOS RÁPIDOS -->
+            <div class="quick-examples">
+                <button class="example-btn" data-task="Terminar el informe del proyecto">Informe</button>
+                <button class="example-btn" data-task="Revisar propuestas de proveedores">Proveedores</button>
+                <button class="example-btn" data-task="Hacer llamada con el cliente">Llamada</button>
+                <button class="example-btn" data-task="Preparar presentación">Presentación</button>
+            </div>
+        </section>
+ 
+        <!-- SECCIÓN DE PASO ACTUAL (OCULTA HASTA QUE SE GENERE) -->
+        <section id="step-section" class="step-section hidden">
+            <div class="step-content">
+                <p class="step-label">Primer paso:</p>
+                <p id="current-step" class="current-step">Esperando...</p>
+            </div>
+ 
+            <!-- TIMER -->
+            <div class="timer-section">
+                <div class="timer-display">
+                    <span id="timer" class="timer">5:00</span>
+                    <p class="timer-text">¿Necesitás 5 min?</p>
+                </div>
+                <button id="timer-toggle" class="timer-btn">Iniciar timer</button>
+            </div>
+ 
+            <!-- BOTONES DE ACCIÓN -->
+            <div class="action-buttons">
+                <button id="start-btn" class="btn btn-start">
+                    Empezar
+                </button>
+                <button id="stuck-btn" class="btn btn-stuck">
+                    Estoy trabado
+                </button>
+                <button id="done-btn" class="btn btn-done">
+                    Listo
+                </button>
+            </div>
+ 
+            <!-- DESCRIPCIÓN DE TAREA -->
+            <div class="task-meta">
+                <p class="task-name" id="task-name"></p>
+            </div>
+        </section>
+ 
+        <!-- HISTORIAL -->
+        <section class="history-section">
+            <h2 class="history-title">Últimos pasos completados</h2>
+            <div id="history-list" class="history-list">
+                <p class="history-empty">Sin pasos completados aún</p>
+            </div>
+        </section>
+ 
+        <!-- MODAL CON MOTIVACIÓN -->
+        <div id="motivation-modal" class="modal hidden">
+            <div class="modal-content">
+                <p id="motivation-text" class="motivation-text"></p>
+                <button class="btn btn-secondary" onclick="document.getElementById('motivation-modal').classList.add('hidden')">
+                    Entendido
+                </button>
+            </div>
+        </div>
+    </div>
+ 
+    <script>
+        // Verificar si es necesario registrar el service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(err => {
+                console.log('SW no disponible:', err);
+            });
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
