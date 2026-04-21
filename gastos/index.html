@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3b82f6">
+  <meta name="description" content="App para registrar gastos, cuentas y transferencias de forma rápida y simple.">
+  
+  <!-- PWA -->
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%233b82f6' width='192' height='192'/><text x='50%' y='50%' font-size='80' fill='white' text-anchor='middle' dy='.3em' font-weight='bold'>$</text></svg>">
+  
+  <!-- Apple mobile web app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Gastos">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%233b82f6' width='180' height='180'/><text x='50%' y='50%' font-size='70' fill='white' text-anchor='middle' dy='.3em' font-weight='bold'>$</text></svg>">
+  
+  <!-- Estilos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./styles.css">
+  <title>Gastos</title>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <h1 class="header-title">Gastos</h1>
+        <button class="toggle-theme-btn" aria-label="Alternar tema" title="Alternar estilo">
+          <span class="toggle-icon">◐</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="nav-tabs">
+      <button class="nav-tab nav-tab--active" data-tab="dashboard">Resumen</button>
+      <button class="nav-tab" data-tab="add-gasto">Nuevo gasto</button>
+      <button class="nav-tab" data-tab="transferencias">Transferencias</button>
+      <button class="nav-tab" data-tab="cuentas">Cuentas</button>
+      <button class="nav-tab" data-tab="categorias">Categorías</button>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <main class="main-content">
+
+      <!-- TAB: DASHBOARD / RESUMEN -->
+      <section id="dashboard" class="tab-content tab-content--active">
+        <div class="section-header">
+          <h2>Resumen</h2>
+          <div class="filter-controls">
+            <select id="filter-mes" class="filter-select">
+              <option value="">Todos los meses</option>
+            </select>
+            <button class="btn-tertiary" id="btn-reset-data">Cargar datos demo</button>
+          </div>
+        </div>
+
+        <!-- Saldos de cuentas -->
+        <div class="card">
+          <h3 class="card-title">Saldos de cuentas</h3>
+          <div id="saldos-container" class="saldos-grid">
+            <!-- Generado dinámicamente -->
+          </div>
+        </div>
+
+        <!-- Gastos por categoría -->
+        <div class="card">
+          <h3 class="card-title">Gastos por categoría</h3>
+          <div id="categorias-gastos" class="categorias-list">
+            <!-- Generado dinámicamente -->
+          </div>
+          <div class="summary-line">
+            <span class="summary-label">Total gastado:</span>
+            <span class="summary-value" id="total-gastos">$0</span>
+          </div>
+        </div>
+
+        <!-- Últimos movimientos -->
+        <div class="card">
+          <h3 class="card-title">Últimos movimientos</h3>
+          <div id="ultimos-movimientos" class="movimientos-list">
+            <!-- Generado dinámicamente -->
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: NUEVO GASTO -->
+      <section id="add-gasto" class="tab-content">
+        <div class="section-header">
+          <h2>Registrar gasto</h2>
+        </div>
+
+        <form class="form-gasto" id="form-gasto">
+          <div class="form-group">
+            <label for="gasto-importe">Importe ($)</label>
+            <input 
+              type="number" 
+              id="gasto-importe" 
+              placeholder="0.00" 
+              step="0.01"
+              min="0"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="gasto-descripcion">Descripción</label>
+            <input 
+              type="text" 
+              id="gasto-descripcion" 
+              placeholder="¿Qué compraste?" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="gasto-fecha">Fecha</label>
+            <input 
+              type="date" 
+              id="gasto-fecha" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="gasto-cuenta">Cuenta</label>
+            <select id="gasto-cuenta" required>
+              <option value="">Elegí una cuenta</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="gasto-categoria">Categoría</label>
+            <select id="gasto-categoria" required>
+              <option value="">Elegí una categoría</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-primary">Guardar gasto</button>
+        </form>
+
+        <div class="card">
+          <h3 class="card-title">Últimos gastos</h3>
+          <div id="gastos-list" class="movimientos-list">
+            <!-- Generado dinámicamente -->
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: TRANSFERENCIAS -->
+      <section id="transferencias" class="tab-content">
+        <div class="section-header">
+          <h2>Transferencias entre cuentas</h2>
+        </div>
+
+        <form class="form-transferencia" id="form-transferencia">
+          <div class="form-group">
+            <label for="transfer-importe">Importe ($)</label>
+            <input 
+              type="number" 
+              id="transfer-importe" 
+              placeholder="0.00" 
+              step="0.01"
+              min="0"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="transfer-origen">Desde (cuenta origen)</label>
+            <select id="transfer-origen" required>
+              <option value="">Elegí origen</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="transfer-destino">Hacia (cuenta destino)</label>
+            <select id="transfer-destino" required>
+              <option value="">Elegí destino</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="transfer-fecha">Fecha</label>
+            <input 
+              type="date" 
+              id="transfer-fecha" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="transfer-nota">Nota (opcional)</label>
+            <input 
+              type="text" 
+              id="transfer-nota" 
+              placeholder="Referencia de la transferencia"
+            >
+          </div>
+
+          <button type="submit" class="btn-primary">Guardar transferencia</button>
+        </form>
+
+        <div class="card">
+          <h3 class="card-title">Transferencias registradas</h3>
+          <div id="transferencias-list" class="movimientos-list">
+            <!-- Generado dinámicamente -->
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: CUENTAS -->
+      <section id="cuentas" class="tab-content">
+        <div class="section-header">
+          <h2>Gestionar cuentas</h2>
+        </div>
+
+        <form class="form-cuenta" id="form-cuenta">
+          <div class="form-group">
+            <label for="cuenta-nombre">Nombre de la cuenta</label>
+            <input 
+              type="text" 
+              id="cuenta-nombre" 
+              placeholder="Ej: Efectivo, Débito BBVA" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="cuenta-saldo-inicial">Saldo inicial ($)</label>
+            <input 
+              type="number" 
+              id="cuenta-saldo-inicial" 
+              placeholder="0.00" 
+              step="0.01"
+              required
+            >
+          </div>
+
+          <button type="submit" class="btn-primary">Crear cuenta</button>
+        </form>
+
+        <div class="card">
+          <h3 class="card-title">Cuentas existentes</h3>
+          <div id="cuentas-list" class="cuentas-grid">
+            <!-- Generado dinámicamente -->
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: CATEGORÍAS -->
+      <section id="categorias" class="tab-content">
+        <div class="section-header">
+          <h2>Gestionar categorías</h2>
+        </div>
+
+        <form class="form-categoria" id="form-categoria">
+          <div class="form-group">
+            <label for="categoria-nombre">Nombre de la categoría</label>
+            <input 
+              type="text" 
+              id="categoria-nombre" 
+              placeholder="Ej: Salidas, Salud" 
+              required
+            >
+          </div>
+
+          <button type="submit" class="btn-primary">Crear categoría</button>
+        </form>
+
+        <div class="card">
+          <h3 class="card-title">Categorías existentes</h3>
+          <div id="categorias-list" class="categorias-grid">
+            <!-- Generado dinámicamente -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Gastos v1.0 | Tus datos se guardan en tu dispositivo</p>
+    </footer>
+  </div>
+
+  <!-- Modal de confirmación -->
+  <div class="modal modal--hidden" id="modal-confirm">
+    <div class="modal-content">
+      <h3 id="modal-title">Confirmar acción</h3>
+      <p id="modal-message"></p>
+      <div class="modal-buttons">
+        <button class="btn-secondary" id="btn-modal-cancel">Cancelar</button>
+        <button class="btn-danger" id="btn-modal-confirm">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de notificación -->
+  <div class="toast toast--hidden" id="toast">
+    <p id="toast-message"></p>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
