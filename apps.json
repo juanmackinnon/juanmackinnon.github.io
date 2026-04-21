@@ -1,0 +1,17 @@
+[
+  {
+    "name": "AntiPro",
+    "path": "./antipro/",
+    "description": "App para destrabarte y empezar tareas"
+  },
+  {
+    "name": "Gastos",
+    "path": "./gastos/",
+    "description": "Seguimiento de cuentas, gastos y transferencias"
+  },
+  {
+    "name": "Tareas",
+    "path": "./tareas/",
+    "description": "Gestor de tareas con prioridades y fechas"
+  }
+]
