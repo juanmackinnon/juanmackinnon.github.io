@@ -389,6 +389,11 @@ body {
     opacity: 0.9;
 }
 
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 /* Botón secundario (empezar) */
 .btn-secondary {
     background-color: var(--color-border);
@@ -406,6 +411,11 @@ body {
     color: white;
 }
 
+.btn-secondary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 /* Botón warning (trabado) */
 .btn-warning {
     background-color: var(--color-warning);
@@ -421,6 +431,11 @@ body {
     opacity: 0.9;
 }
 
+.btn-warning:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 /* Botón success (listo) */
 .btn-success {
     background-color: var(--color-success);
@@ -434,6 +449,11 @@ body {
 
 .btn-success:hover {
     opacity: 0.9;
+}
+
+.btn-success:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 /* Botón texto (limpiar historial) */
