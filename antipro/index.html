@@ -3,28 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#3b82f6">
+    <meta name="theme-color" content="#080d14">
     <meta name="description" content="AntiPro: Generá tu primer paso y destrábate">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="AntiPro">
-    
+
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%233b82f6' width='180' height='180'/><text x='50%' y='50%' font-size='90' font-weight='700' fill='white' text-anchor='middle' dy='.3em'>A</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%233b82f6' width='180' height='180'/><text x='50%' y='50%' font-size='90' font-weight='700' fill='white' text-anchor='middle' dy='.3em'>A</text></svg>">
-    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%233b82f6' width='180' height='180' rx='40'/><text x='50%' y='50%' font-size='90' font-weight='700' fill='white' text-anchor='middle' dy='.3em'>A</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%233b82f6' width='180' height='180' rx='40'/><text x='50%' y='50%' font-size='90' font-weight='700' fill='white' text-anchor='middle' dy='.3em'>A</text></svg>">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
-    <title>AntiPro - Primer paso ya</title>
+    <title>AntiPro</title>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <!-- Izquierda: volver + título -->
             <div class="header-left">
                 <a href="../" class="btn-back" title="Volver al menú principal">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -34,38 +32,23 @@
                 </a>
                 <h1 class="app-title">AntiPro</h1>
             </div>
-
-            <!-- Derecha: toggle tema -->
-            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="5"/>
-                    <line x1="12" y1="1" x2="12" y2="3"/>
-                    <line x1="12" y1="21" x2="12" y2="23"/>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                    <line x1="1" y1="12" x2="3" y2="12"/>
-                    <line x1="21" y1="12" x2="23" y2="12"/>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                </svg>
-            </button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">◐</button>
         </div>
     </header>
- 
+
     <main class="main">
-        <!-- Sección: Input de tarea -->
+        <!-- Input de tarea -->
         <section class="section input-section">
             <label for="taskInput" class="label">¿Qué tenés que hacer?</label>
-            <input 
-                type="text" 
-                id="taskInput" 
-                class="input" 
+            <input
+                type="text"
+                id="taskInput"
+                class="input"
                 placeholder="Ej: Escribir el informe de ventas"
                 autocomplete="off"
             >
             <button id="generateBtn" class="btn btn-primary">Generar primer paso</button>
-            
-            <!-- Ejemplos rápidos -->
+
             <div class="quick-examples" id="quickExamples">
                 <p class="quick-examples-label">O probá con estos:</p>
                 <div class="examples-grid">
@@ -76,8 +59,8 @@
                 </div>
             </div>
         </section>
- 
-        <!-- Sección: Paso actual -->
+
+        <!-- Paso actual -->
         <section id="stepSection" class="section step-section hidden">
             <div class="step-container">
                 <div class="step-header">
@@ -88,44 +71,38 @@
                     <h2 id="stepText" class="step-text"></h2>
                     <p id="taskTitle" class="task-title"></p>
                 </div>
- 
-                <!-- Timer -->
+
                 <div class="timer-section">
                     <div class="timer-display" id="timerDisplay">5:00</div>
-                    <p class="timer-label">para que te enfoques</p>
+                    <p class="timer-label">minutos de foco</p>
                 </div>
- 
-                <!-- Botones de acción -->
+
                 <div class="action-buttons">
                     <button id="startBtn" class="btn btn-secondary">
-                        <span class="btn-icon">▶</span>
-                        Empezar
+                        <span class="btn-icon">▶</span> Empezar
                     </button>
                     <button id="stuckBtn" class="btn btn-warning">
-                        <span class="btn-icon">⚡</span>
-                        Estoy trabado
+                        <span class="btn-icon">⚡</span> Estoy trabado
                     </button>
                     <button id="doneBtn" class="btn btn-success">
-                        <span class="btn-icon">✓</span>
-                        Listo
+                        <span class="btn-icon">✓</span> Listo
                     </button>
                 </div>
             </div>
         </section>
- 
-        <!-- Sección: Historial -->
+
+        <!-- Historial -->
         <section id="historySection" class="section history-section hidden">
-            <h3 class="section-title">Últimos pasos completados</h3>
+            <h3 class="section-title">Pasos completados</h3>
             <div id="historyList" class="history-list"></div>
             <button id="clearHistoryBtn" class="btn btn-text">Limpiar historial</button>
         </section>
     </main>
- 
-    <!-- Footer -->
+
     <footer class="footer">
-        <p class="footer-text">AntiPro &mdash; Destrábate en 5 minutos</p>
+        <p class="footer-text">AntiPro · Primer paso ya</p>
     </footer>
- 
+
     <script src="app.js"></script>
 </body>
 </html>
