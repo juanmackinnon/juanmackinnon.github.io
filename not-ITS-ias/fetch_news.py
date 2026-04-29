@@ -57,8 +57,6 @@ _relevance_pattern = re.compile(
 
 # ============================================================
 # CATEGORY RULES
-# Each category is a list of keyword patterns (OR logic).
-# Order matters — first match wins.
 # ============================================================
 CATEGORY_RULES = {
     "autonomos": [
@@ -108,7 +106,6 @@ CATEGORY_RULES = {
     ],
 }
 
-# Compile category patterns
 _category_patterns = {
     cat: [re.compile(p, re.IGNORECASE) for p in patterns]
     for cat, patterns in CATEGORY_RULES.items()
@@ -119,7 +116,6 @@ _category_patterns = {
 # ============================================================
 
 def strip_html(text: str) -> str:
-    """Remove HTML tags and decode basic entities."""
     text = re.sub(r"<[^>]+>", " ", text or "")
     text = text.replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
     text = text.replace("&nbsp;", " ").replace("&#8217;", "'").replace("&#8220;", '"').replace("&#8221;", '"')
@@ -127,7 +123,6 @@ def strip_html(text: str) -> str:
 
 
 def parse_date(entry) -> str:
-    """Return ISO 8601 UTC string from feed entry date fields."""
     for field in ("published", "updated"):
         raw = entry.get(f"{field}_parsed") or entry.get(field)
         if raw:
@@ -143,18 +138,15 @@ def parse_date(entry) -> str:
 
 
 def make_id(url: str) -> str:
-    """Stable short ID from URL."""
     return hashlib.md5(url.encode()).hexdigest()[:12]
 
 
 def is_relevant(title: str, description: str) -> bool:
-    """Return True if article passes relevance filter."""
     text = f"{title} {description}"
     return bool(_relevance_pattern.search(text))
 
 
 def classify(title: str, description: str) -> str:
-    """Return category key. Defaults to 'industria' if no match."""
     text = f"{title} {description}"
     for cat, patterns in _category_patterns.items():
         for p in patterns:
@@ -164,21 +156,16 @@ def classify(title: str, description: str) -> str:
 
 
 def get_image(entry) -> str | None:
-    """Try to extract a thumbnail/image URL from the feed entry."""
-    # media:thumbnail
     if hasattr(entry, "media_thumbnail") and entry.media_thumbnail:
         return entry.media_thumbnail[0].get("url")
-    # media:content
     if hasattr(entry, "media_content") and entry.media_content:
         for m in entry.media_content:
             if m.get("medium") == "image" or m.get("type", "").startswith("image"):
                 return m.get("url")
-    # enclosures
     if hasattr(entry, "enclosures") and entry.enclosures:
         for enc in entry.enclosures:
             if enc.get("type", "").startswith("image"):
                 return enc.get("url") or enc.get("href")
-    # look for <img> in content/summary
     for field in ("content", "summary"):
         val = entry.get(field, "")
         if isinstance(val, list):
@@ -193,7 +180,6 @@ def get_image(entry) -> str | None:
 # ============================================================
 
 def fetch_feed(feed_meta: dict) -> list[dict]:
-    """Fetch a single feed and return list of processed articles."""
     articles = []
     try:
         parsed = feedparser.parse(feed_meta["url"], request_headers={"User-Agent": "Not-ITS-ias/1.0"})
@@ -201,7 +187,7 @@ def fetch_feed(feed_meta: dict) -> list[dict]:
             print(f"  ⚠ Bozo feed: {feed_meta['name']}")
             return []
 
-        for entry in parsed.entries[:30]:  # max 30 per feed
+        for entry in parsed.entries[:30]:
             title = strip_html(entry.get("title", ""))
             summary = strip_html(entry.get("summary", "") or entry.get("description", ""))
             link = entry.get("link", "")
@@ -230,7 +216,6 @@ def fetch_feed(feed_meta: dict) -> list[dict]:
 
 
 def deduplicate(articles: list[dict]) -> list[dict]:
-    """Remove duplicates by ID, keep newest."""
     seen = {}
     for a in articles:
         aid = a["id"]
@@ -240,20 +225,13 @@ def deduplicate(articles: list[dict]) -> list[dict]:
 
 
 def pick_destacadas(articles: list[dict], n: int = 10) -> list[dict]:
-    """
-    Select top N 'destacadas': most recent across all categories,
-    biased toward sources that cover multiple ITS disciplines.
-    """
     sorted_all = sorted(articles, key=lambda x: x["date"], reverse=True)
     return sorted_all[:n]
 
 
 def build_news_json(articles: list[dict]) -> dict:
-    """Build the final news.json structure."""
-    # Sort all by date desc
     articles = sorted(articles, key=lambda x: x["date"], reverse=True)
 
-    # Build category buckets
     categories = {
         "destacadas": [],
         "trafico": [],
@@ -272,7 +250,6 @@ def build_news_json(articles: list[dict]) -> dict:
 
     categories["destacadas"] = pick_destacadas(articles, 10)
 
-    # Stats
     stats = {
         "total":    len(articles),
         "by_category": {k: len(v) for k, v in categories.items() if k != "destacadas"},
@@ -311,7 +288,7 @@ def main():
 
     news = build_news_json(all_articles)
 
-    with open("news.json", "w", encoding="utf-8") as f:
+    with open("not-ITS-ias/news.json", "w", encoding="utf-8") as f:
         json.dump(news, f, ensure_ascii=False, indent=2)
 
     print(f"\n✓ news.json written — {news['stats']['total']} articles across {len(news['categories'])} categories")
