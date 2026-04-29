@@ -30,13 +30,13 @@ jobs:
         run: pip install feedparser
 
       - name: Fetch news
-        run: python fetch_news.py
+        run: python not-ITS-ias/fetch_news.py
 
       - name: Commit news.json if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add news.json
+          git add not-ITS-ias/news.json
           if git diff --cached --quiet; then
             echo "No changes to news.json — skipping commit"
           else
