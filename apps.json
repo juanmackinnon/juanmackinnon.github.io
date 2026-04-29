@@ -10,8 +10,8 @@
     "description": "Seguimiento de cuentas, gastos y transferencias"
   },
   {
-    "name": "Tareas",
-    "path": "./tareas/",
-    "description": "Gestor de tareas con prioridades y fechas"
+    "name": "Not-ITS-ias",
+    "path": "./not-ITS-ias/",
+    "description": "Portal de noticias del Mundo ITS"
   }
 ]
