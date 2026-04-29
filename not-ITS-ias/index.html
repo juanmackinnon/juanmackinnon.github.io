@@ -1,0 +1,158 @@
+Index · HTML
+Copiar
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Not-ITS-ias — Noticias de Sistemas de Transporte Inteligente, Smart Cities y Movilidad Urbana">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Not-ITS-ias">
+ 
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <link rel="apple-touch-icon" href="./icon.svg">
+ 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="./styles.css">
+  <title>Not-ITS-ias</title>
+</head>
+<body>
+ 
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <img src="./icon.svg" alt="Not-ITS-ias" class="header-logo">
+        <div class="header-titles">
+          <h1 class="header-name">Not-ITS-ias</h1>
+          <span class="header-tagline">ITS · Smart Cities · Movilidad</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="update-badge" id="updateBadge">
+          <span class="update-dot"></span>
+          <span class="update-time" id="updateTime">—</span>
+        </div>
+        <button class="btn-refresh" id="btnRefresh" title="Actualizar noticias" aria-label="Actualizar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"/>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+          </svg>
+        </button>
+        <button class="btn-theme" id="btnTheme" title="Cambiar tema" aria-label="Cambiar tema">◐</button>
+      </div>
+    </div>
+  </header>
+ 
+  <!-- ===== CATEGORY TABS ===== -->
+  <nav class="category-nav" id="categoryNav" role="tablist" aria-label="Categorías de noticias">
+    <button class="cat-tab cat-tab--active" data-cat="destacadas" role="tab" aria-selected="true">
+      <span class="cat-icon">⚡</span><span class="cat-label">Destacadas</span>
+    </button>
+    <button class="cat-tab" data-cat="trafico" role="tab" aria-selected="false">
+      <span class="cat-icon">🚦</span><span class="cat-label">Tráfico</span>
+    </button>
+    <button class="cat-tab" data-cat="smartcities" role="tab" aria-selected="false">
+      <span class="cat-icon">🏙️</span><span class="cat-label">Smart Cities</span>
+    </button>
+    <button class="cat-tab" data-cat="movilidad" role="tab" aria-selected="false">
+      <span class="cat-icon">⚡</span><span class="cat-label">Movilidad</span>
+    </button>
+    <button class="cat-tab" data-cat="autonomos" role="tab" aria-selected="false">
+      <span class="cat-icon">🤖</span><span class="cat-label">Autónomos</span>
+    </button>
+    <button class="cat-tab" data-cat="infraestructura" role="tab" aria-selected="false">
+      <span class="cat-icon">🛣️</span><span class="cat-label">Infraestructura</span>
+    </button>
+    <button class="cat-tab" data-cat="industria" role="tab" aria-selected="false">
+      <span class="cat-icon">🏢</span><span class="cat-label">Industria</span>
+    </button>
+    <button class="cat-tab" data-cat="regulacion" role="tab" aria-selected="false">
+      <span class="cat-icon">📋</span><span class="cat-label">Regulación</span>
+    </button>
+  </nav>
+ 
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main" id="main">
+ 
+    <!-- Loading state -->
+    <div class="state-loading" id="stateLoading">
+      <div class="loading-grid">
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </div>
+    </div>
+ 
+    <!-- Error state -->
+    <div class="state-error hidden" id="stateError">
+      <div class="state-icon">⚠️</div>
+      <h2 class="state-title">No se pudo cargar el feed</h2>
+      <p class="state-message" id="stateErrorMsg">Verificá tu conexión e intentá de nuevo.</p>
+      <button class="btn-retry" id="btnRetry">Reintentar</button>
+    </div>
+ 
+    <!-- Empty state -->
+    <div class="state-empty hidden" id="stateEmpty">
+      <div class="state-icon">📡</div>
+      <h2 class="state-title">Sin artículos en esta categoría</h2>
+      <p class="state-message">Las noticias se actualizan 3 veces por día.</p>
+    </div>
+ 
+    <!-- Articles grid -->
+    <div class="articles-grid" id="articlesGrid" role="feed" aria-label="Artículos"></div>
+ 
+    <!-- Stats bar -->
+    <div class="stats-bar hidden" id="statsBar">
+      <span class="stats-text" id="statsText"></span>
+    </div>
+ 
+  </main>
+ 
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p class="footer-text">
+      Not-ITS-ias v1.0 &mdash; Noticias ITS generadas automáticamente &bull;
+      <a href="https://github.com" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </footer>
+ 
+  <!-- ===== ARTICLE MODAL ===== -->
+  <div class="modal-overlay hidden" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="modal-image-wrap" id="modalImageWrap"></div>
+      <div class="modal-body">
+        <div class="modal-meta" id="modalMeta"></div>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-summary" id="modalSummary"></p>
+        <a class="modal-cta" id="modalLink" href="#" target="_blank" rel="noopener noreferrer">
+          Leer artículo completo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+ 
+  <script src="./app.js"></script>
+</body>
+</html>
+ 
