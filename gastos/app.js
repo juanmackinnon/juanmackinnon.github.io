@@ -566,9 +566,8 @@ document.getElementById('form-categoria').addEventListener('submit', (e) => {
 
 // Toggle de tema — clase unificada: style-accent
 document.querySelector('.toggle-theme-btn').addEventListener('click', () => {
-  document.body.classList.toggle('style-accent');
-  datos.theme = document.body.classList.contains('style-accent') ? 'accent' : 'minimal';
-  guardarDatos(datos);
+  const isLight = document.body.classList.toggle('style-light');
+  localStorage.setItem('gastos-theme', isLight ? 'light' : 'dark');
 });
 
 // Datos demo
@@ -614,8 +613,6 @@ if (datos.theme === 'accent') {
 actualizarUI();
 
 // Service Worker
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js').catch(err => {
-    console.log('Service Worker no registrado:', err);
-  });
+if (localStorage.getItem('gastos-theme') === 'light') {
+  document.body.classList.add('style-light');
 }
