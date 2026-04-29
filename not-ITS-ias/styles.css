@@ -728,21 +728,26 @@ a:hover { text-decoration: underline; }
   outline-offset: 2px;
 }
 
-/* ---- HEADER LEFT (contenedor botón volver + brand) ---- */
 .header-left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex: 1;
   min-width: 0;
 }
  
-/* ---- BOTÓN VOLVER AL MENÚ ---- */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+ 
 .btn-back {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 10px;
+  padding: 5px 10px;
   background-color: transparent;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -755,9 +760,9 @@ a:hover { text-decoration: underline; }
   transition: all 0.2s ease;
   white-space: nowrap;
   flex-shrink: 0;
-  min-height: 36px;
+  min-height: 34px;
 }
  
-.btn-back:hover  { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.btn-back:hover  { border-color: var(--accent); color: var(--accent-light); text-decoration: none; }
 .btn-back:active { transform: scale(0.95); }
 .btn-back svg    { flex-shrink: 0; }
