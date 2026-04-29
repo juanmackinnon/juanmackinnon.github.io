@@ -8,25 +8,25 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Not-ITS-ias">
- 
+
   <link rel="manifest" href="./manifest.json">
   <link rel="icon" type="image/svg+xml" href="./icon.svg">
   <link rel="apple-touch-icon" href="./icon.svg">
- 
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
- 
+
   <link rel="stylesheet" href="./styles.css">
   <title>Not-ITS-ias</title>
 </head>
 <body>
- 
+
   <!-- ===== HEADER ===== -->
   <header class="header">
     <div class="header-inner">
- 
+
       <!-- Izquierda: botón volver + brand -->
       <div class="header-left">
         <a href="../" class="btn-back" title="Volver al menú principal">
@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- Derecha: badge + acciones -->
       <div class="header-actions">
         <div class="update-badge" id="updateBadge">
@@ -58,10 +58,10 @@
         </button>
         <button class="btn-theme" id="btnTheme" title="Cambiar tema" aria-label="Cambiar tema">◐</button>
       </div>
- 
+
     </div>
   </header>
- 
+
   <!-- ===== CATEGORY TABS ===== -->
   <nav class="category-nav" id="categoryNav" role="tablist" aria-label="Categorías de noticias">
     <button class="cat-tab cat-tab--active" data-cat="destacadas" role="tab" aria-selected="true">
@@ -89,10 +89,10 @@
       <span class="cat-icon">📋</span><span class="cat-label">Regulación</span>
     </button>
   </nav>
- 
+
   <!-- ===== MAIN CONTENT ===== -->
   <main class="main" id="main">
- 
+
     <!-- Loading state -->
     <div class="state-loading" id="stateLoading">
       <div class="loading-grid">
@@ -104,7 +104,7 @@
         <div class="skeleton-card"></div>
       </div>
     </div>
- 
+
     <!-- Error state -->
     <div class="state-error hidden" id="stateError">
       <div class="state-icon">⚠️</div>
@@ -112,31 +112,31 @@
       <p class="state-message" id="stateErrorMsg">Verificá tu conexión e intentá de nuevo.</p>
       <button class="btn-retry" id="btnRetry">Reintentar</button>
     </div>
- 
+
     <!-- Empty state -->
     <div class="state-empty hidden" id="stateEmpty">
       <div class="state-icon">📡</div>
       <h2 class="state-title">Sin artículos en esta categoría</h2>
       <p class="state-message">Las noticias se actualizan 3 veces por día.</p>
     </div>
- 
+
     <!-- Articles grid -->
     <div class="articles-grid" id="articlesGrid" role="feed" aria-label="Artículos"></div>
- 
+
     <!-- Stats bar -->
     <div class="stats-bar hidden" id="statsBar">
       <span class="stats-text" id="statsText"></span>
     </div>
- 
+
   </main>
- 
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <p class="footer-text">
       Not-ITS-ias v1.0 &mdash; Noticias ITS generadas automáticamente
     </p>
   </footer>
- 
+
   <!-- ===== ARTICLE MODAL ===== -->
   <div class="modal-overlay hidden" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-card">
@@ -160,7 +160,7 @@
       </div>
     </div>
   </div>
- 
+
   <script src="./app.js"></script>
 </body>
 </html>
