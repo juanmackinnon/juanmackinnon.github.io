@@ -1,30 +1,100 @@
 {
   "version": "1.0",
-  "updated_at": "2026-04-30T11:55:31Z",
+  "updated_at": "2026-04-30T17:53:05Z",
   "stats": {
-    "total": 73,
+    "total": 74,
     "by_category": {
       "trafico": 6,
-      "smartcities": 2,
+      "smartcities": 3,
       "movilidad": 6,
       "autonomos": 16,
-      "infraestructura": 1,
+      "infraestructura": 2,
       "industria": 36,
-      "regulacion": 6
+      "regulacion": 5
     },
     "by_source": {
-      "Electrive": 24,
-      "AV International": 10,
-      "ITS International": 9,
       "Smart Cities Dive": 4,
+      "Electrive": 24,
+      "ITS International": 10,
+      "AV International": 10,
       "Traffic Technology Today": 10,
       "Cities Today": 6,
       "ITS America": 10
     },
-    "updated_at": "2026-04-30T11:55:31Z"
+    "updated_at": "2026-04-30T17:53:05Z"
   },
   "categories": {
     "destacadas": [
+      {
+        "id": "20d51c9e71da",
+        "title": "How transit agencies can hire and keep front-line workers",
+        "summary": "An Urban Institute researcher predicts that &ldquo;under current trends, the cost of service will go up over time.&rdquo;",
+        "url": "https://www.smartcitiesdive.com/news/transit-agencies-frontline-worker-recruit-retain/818892/",
+        "source": "Smart Cities Dive",
+        "date": "2026-04-30T15:58:00Z",
+        "category": "industria",
+        "image": null
+      },
+      {
+        "id": "31ac488d2b06",
+        "title": "Fan builds LEGO version of Renault 5 Turbo 3E – official model could follow",
+        "summary": "A British LEGO fan has recreated the all-electric Renault 5 Turbo 3E as a detailed brick-built model - before the real vehicle even reaches production. The idea has attracted so much attention that Renault is now backing a campaign to turn it into an official Lego set.",
+        "url": "https://www.electrive.com/2026/04/30/fan-builds-lego-version-of-renault-5-turbo-3e-official-model-could-follow/",
+        "source": "Electrive",
+        "date": "2026-04-30T15:30:00Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/04/dave-collins-lego-renault-5-turbo-3e-r5-t3e-1-400x267.jpeg"
+      },
+      {
+        "id": "76e584c17302",
+        "title": "ITS European Congress 2026: Day 2 in Istanbul",
+        "summary": "ITS European Congress 2026: Day 2 in Istanbul SBiswell Thu, 04/30/2026 - 15:53 Join the ITS International team in Istanbul as day 2 of ITS European Congress kicks off... Join the ITS International team in Istanbul as day 2 of ITS European Congress kicks off... Join the ITS International team in Ista…",
+        "url": "https://www.itsinternational.com/video/its-european-congress-2026-day-2-istanbul",
+        "source": "ITS International",
+        "date": "2026-04-30T14:53:11Z",
+        "category": "industria",
+        "image": null
+      },
+      {
+        "id": "011da88a5293",
+        "title": "ITS European Congress 2026: Day 1 in Istanbul",
+        "summary": "ITS European Congress 2026: Day 1 in Istanbul SBiswell Thu, 04/30/2026 - 15:50 See what was on show at Day 1 of the ITS European Congress 2026! ITS International editor, Adam Hill, takes a look around the showfloor...",
+        "url": "https://www.itsinternational.com/video/its-european-congress-2026-day-1-istanbul",
+        "source": "ITS International",
+        "date": "2026-04-30T14:50:59Z",
+        "category": "industria",
+        "image": null
+      },
+      {
+        "id": "6b93f3a0f2e8",
+        "title": "This New York City leader unlocked a century of data, turning paper files into actionable intelligence",
+        "summary": "Smart Cities Dive Public Service Award winner Janet Aristy is modernizing New York City's infrastructure systems while empowering the next generation of public servants.",
+        "url": "https://www.smartcitiesdive.com/news/smart-cities-dive-public-service-award-janet-aristy/818883/",
+        "source": "Smart Cities Dive",
+        "date": "2026-04-30T14:28:00Z",
+        "category": "smartcities",
+        "image": null
+      },
+      {
+        "id": "4946345f48f0",
+        "title": "Tharsis’ innovative e-ship project receives €21 Million in funding",
+        "summary": "The Dutch firm Tharsis Ship Management has received funding from the EU Innovation Fund for its eSeaRiverBarge project. The project includes the construction and operation of two zero-emission container ships for deployment between the Netherlands and the United Kingdom.",
+        "url": "https://www.electrive.com/2026/04/30/tharsis-innovative-e-ship-project-receives-e21-million-in-funding/",
+        "source": "Electrive",
+        "date": "2026-04-30T14:00:00Z",
+        "category": "regulacion",
+        "image": "https://www.electrive.com/media/2026/04/tharsis-ship-management-eseariverbarge-e-schiffe-niederlande-2026-400x267.jpg"
+      },
+      {
+        "id": "b3c464e0c8e8",
+        "title": "Moto to ‘quadruple’ number of EV charging bays",
+        "summary": "Moto Hospitality, the UK motorway services operator, has announced a fourfold increase in the number of EV charging bays at its sites 'in the coming years'. It is also planning 15 eHGV superhub sites with over 100 charging bays for use by electric freight.",
+        "url": "https://www.electrive.com/2026/04/30/moto-to-quadruple-number-of-ev-charging-bays/",
+        "source": "Electrive",
+        "date": "2026-04-30T12:00:00Z",
+        "category": "infraestructura",
+        "image": "https://www.electrive.com/media/2026/04/3manfactory-moto-charge-toddington-activation-3ma20112025-0166-large-1536x1024-cropped-400x267.jpeg"
+      },
       {
         "id": "8ac070edce8d",
         "title": "Washington State launches incentive programme for zero-emission trucks and equipment",
@@ -54,76 +124,6 @@
         "date": "2026-04-30T11:00:00Z",
         "category": "industria",
         "image": "https://www.electrive.com/media/2024/08/lg-energy-solution-2024-002-400x267.jpg"
-      },
-      {
-        "id": "ab2d71991f86",
-        "title": "Avride AV fleet scales to 200 cars",
-        "summary": "Avride has announced that its fleet of autonomous robotaxis now numbers 200 vehicles. Built on the Hyundai Ioniq 5 platform, Avride’s vehicles are actively testing on the streets of Austin and Dallas in Texas. The company said it has added “dozens of new vehicles to the fleet, enabled by a streamlin…",
-        "url": "https://www.autonomousvehicleinternational.com/news/robotaxis/avride-av-fleet-scales-to-200-cars.html",
-        "source": "AV International",
-        "date": "2026-04-30T10:17:46Z",
-        "category": "autonomos",
-        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/1_FbMTfzkBKpCW6qCiVts3mA.webp"
-      },
-      {
-        "id": "1f938f1c4b95",
-        "title": "Ford’s EV losses narrow to $777M in Q1 2026 amid Model e profitability efforts",
-        "summary": "Ford slightly reduced losses in its EV division in Q1 of 2026, but its EV business remains firmly in the red. The company's Model e unit reported a loss of $777 million, an improvement of $72 million compared to the same period last year, as Ford continues working to make its electric cars profitabl…",
-        "url": "https://www.electrive.com/2026/04/30/fords-ev-losses-narrow-to-777m-in-q1-2026-amid-model-e-profitability-efforts/",
-        "source": "Electrive",
-        "date": "2026-04-30T10:00:00Z",
-        "category": "movilidad",
-        "image": "https://www.electrive.com/media/2026/04/2026-mustang-mach-e-gt-california-special-400x267.jpeg"
-      },
-      {
-        "id": "4b11848889c4",
-        "title": "Rocsys unveils next version of its robotic charging solution",
-        "summary": "Rocsys, a company specialising in robotic charging systems, has unveiled its new M1 solution, which enables the automated charging of multiple vehicles simultaneously for robotaxi fleets. The manufacturer also reports raising $13 million US dollars.",
-        "url": "https://www.electrive.com/2026/04/30/rocsys-unveils-next-version-of-its-robotic-charging-solution/",
-        "source": "Electrive",
-        "date": "2026-04-30T09:30:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/rocsys-m1-ladesystem-2026-400x267.jpg"
-      },
-      {
-        "id": "8f1239fc7345",
-        "title": "Tesla unveils its first mass-produced electric truck",
-        "summary": "Tesla's first electric truck has rolled off the new high-volume production line at Gigafactory Nevada. The automaker released an image of the truck alongside the workforce in a new section of the plant - thus confirming that Semi series production has begun.",
-        "url": "https://www.electrive.com/2026/04/30/tesla-unveils-its-first-mass-produced-electric-truck/",
-        "source": "Electrive",
-        "date": "2026-04-30T08:42:08Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/tesla-semi-produktion-usa-sparks-2026-400x267.jpg"
-      },
-      {
-        "id": "247f4a879972",
-        "title": "ITS European Congress 2026: Telecoms and ITS worlds move closer",
-        "summary": "ITS European Congress 2026: Telecoms and ITS worlds move closer Ertico - ITS Europe and the 6G Smart Networks and Services Industry Association (6G-IA) signed a partnership agreement at the 17th ITS European Congress in Istanbul. The idea is to foster closer cooperation between the intelligent trans…",
-        "url": "https://www.itsinternational.com/news/its-european-congress-2026-telecoms-and-its-worlds-move-closer",
-        "source": "ITS International",
-        "date": "2026-04-30T05:42:28Z",
-        "category": "regulacion",
-        "image": "https://www.itsinternational.com/sites/default/files/2026-04/Ertico%206G.jpg"
-      },
-      {
-        "id": "acee6859ec99",
-        "title": "EDITOR’S PICKS: Presentation highlights ahead of this year’s Autonomous Vehicle Tech Expo",
-        "summary": "This year's Autonomous Vehicle Tech Expo (June 23-25, 2026, Stuttgart, Germany) once again includes a three-day conference (rates apply), with over 80 expert speakers from the companies and organizations at the forefront of ADAS and automated driving development. AAVI has picked out some of the pres…",
-        "url": "https://www.autonomousvehicleinternational.com/news/expo/editors-picks-presentation-highlights-ahead-of-this-years-autonomous-vehicle-tech-expo.html",
-        "source": "AV International",
-        "date": "2026-04-29T17:02:03Z",
-        "category": "autonomos",
-        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/filters_no_upscale-e1777538738513.webp"
-      },
-      {
-        "id": "770acb10b98e",
-        "title": "Neusoft and AISpeech partner on AI-powered in-vehicle mobility companion using LLM technology",
-        "summary": "In the AI-native era, large language models (LLMs) are reshaping in-vehicle interaction. Traditional single-command systems are giving way to more advanced approaches that enable contextual understanding, prediction and cross-scenario coordination. Natural voice interaction with continuous conversat…",
-        "url": "https://www.autonomousvehicleinternational.com/news/connectivity/neusoft-and-aispeech-partner-on-ai-powered-in-vehicle-mobility-companion-using-llm-technology.html",
-        "source": "AV International",
-        "date": "2026-04-29T16:58:18Z",
-        "category": "autonomos",
-        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/AdobeStock_1840776318.jpg"
       }
     ],
     "trafico": [
@@ -189,6 +189,16 @@
       }
     ],
     "smartcities": [
+      {
+        "id": "6b93f3a0f2e8",
+        "title": "This New York City leader unlocked a century of data, turning paper files into actionable intelligence",
+        "summary": "Smart Cities Dive Public Service Award winner Janet Aristy is modernizing New York City's infrastructure systems while empowering the next generation of public servants.",
+        "url": "https://www.smartcitiesdive.com/news/smart-cities-dive-public-service-award-janet-aristy/818883/",
+        "source": "Smart Cities Dive",
+        "date": "2026-04-30T14:28:00Z",
+        "category": "smartcities",
+        "image": null
+      },
       {
         "id": "a5e99b3c7f77",
         "title": "Will electrifying the UK’s heavy-duty trucks require more vehicles overall?",
@@ -436,6 +446,16 @@
     ],
     "infraestructura": [
       {
+        "id": "b3c464e0c8e8",
+        "title": "Moto to ‘quadruple’ number of EV charging bays",
+        "summary": "Moto Hospitality, the UK motorway services operator, has announced a fourfold increase in the number of EV charging bays at its sites 'in the coming years'. It is also planning 15 eHGV superhub sites with over 100 charging bays for use by electric freight.",
+        "url": "https://www.electrive.com/2026/04/30/moto-to-quadruple-number-of-ev-charging-bays/",
+        "source": "Electrive",
+        "date": "2026-04-30T12:00:00Z",
+        "category": "infraestructura",
+        "image": "https://www.electrive.com/media/2026/04/3manfactory-moto-charge-toddington-activation-3ma20112025-0166-large-1536x1024-cropped-400x267.jpeg"
+      },
+      {
         "id": "4a7d3179e1bc",
         "title": "Q-Free delivers 50 millionth transponder alongside next-gen OBU1010 launch",
         "summary": "Tolling and intelligent transportation systems provider Q-Free has reached a landmark milestone, delivering its 50 millionth transponder unit in April 2026, an achievement the company says reflects more than four [...] The post Q-Free delivers 50 millionth transponder alongside next-gen OBU1010 laun…",
@@ -447,6 +467,46 @@
       }
     ],
     "industria": [
+      {
+        "id": "20d51c9e71da",
+        "title": "How transit agencies can hire and keep front-line workers",
+        "summary": "An Urban Institute researcher predicts that &ldquo;under current trends, the cost of service will go up over time.&rdquo;",
+        "url": "https://www.smartcitiesdive.com/news/transit-agencies-frontline-worker-recruit-retain/818892/",
+        "source": "Smart Cities Dive",
+        "date": "2026-04-30T15:58:00Z",
+        "category": "industria",
+        "image": null
+      },
+      {
+        "id": "31ac488d2b06",
+        "title": "Fan builds LEGO version of Renault 5 Turbo 3E – official model could follow",
+        "summary": "A British LEGO fan has recreated the all-electric Renault 5 Turbo 3E as a detailed brick-built model - before the real vehicle even reaches production. The idea has attracted so much attention that Renault is now backing a campaign to turn it into an official Lego set.",
+        "url": "https://www.electrive.com/2026/04/30/fan-builds-lego-version-of-renault-5-turbo-3e-official-model-could-follow/",
+        "source": "Electrive",
+        "date": "2026-04-30T15:30:00Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/04/dave-collins-lego-renault-5-turbo-3e-r5-t3e-1-400x267.jpeg"
+      },
+      {
+        "id": "76e584c17302",
+        "title": "ITS European Congress 2026: Day 2 in Istanbul",
+        "summary": "ITS European Congress 2026: Day 2 in Istanbul SBiswell Thu, 04/30/2026 - 15:53 Join the ITS International team in Istanbul as day 2 of ITS European Congress kicks off... Join the ITS International team in Istanbul as day 2 of ITS European Congress kicks off... Join the ITS International team in Ista…",
+        "url": "https://www.itsinternational.com/video/its-european-congress-2026-day-2-istanbul",
+        "source": "ITS International",
+        "date": "2026-04-30T14:53:11Z",
+        "category": "industria",
+        "image": null
+      },
+      {
+        "id": "011da88a5293",
+        "title": "ITS European Congress 2026: Day 1 in Istanbul",
+        "summary": "ITS European Congress 2026: Day 1 in Istanbul SBiswell Thu, 04/30/2026 - 15:50 See what was on show at Day 1 of the ITS European Congress 2026! ITS International editor, Adam Hill, takes a look around the showfloor...",
+        "url": "https://www.itsinternational.com/video/its-european-congress-2026-day-1-istanbul",
+        "source": "ITS International",
+        "date": "2026-04-30T14:50:59Z",
+        "category": "industria",
+        "image": null
+      },
       {
         "id": "8ac070edce8d",
         "title": "Washington State launches incentive programme for zero-emission trucks and equipment",
@@ -638,36 +698,6 @@
         "image": "https://www.electrive.com/media/2026/04/mercedes-benz-trucks-eactros-600-autotransporter-2026-400x267.jpg"
       },
       {
-        "id": "dbc3e5d47a70",
-        "title": "Rolls-Royce unveils limited-edition battery-electric convertible",
-        "summary": "Rolls-Royce has announced 'Project Nightingale', a luxurious convertible with a pure electric drivetrain. The 5.76-meter-long two-seater is expected to be delivered from 2028 onwards - though only by invitation and limited to 100 vehicles worldwide.",
-        "url": "https://www.electrive.com/2026/04/28/rolls-royce-unveils-limited-edition-battery-electric-convertible/",
-        "source": "Electrive",
-        "date": "2026-04-28T15:00:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/rolls-royce-project-nightingale-2026-2-400x267.jpg"
-      },
-      {
-        "id": "8e6b43d370e3",
-        "title": "Austria: DKV Mobility integrates charging points from Energie Steiermark",
-        "summary": "DKV Mobility, a charging card provider specializing in fleet customers, is further expanding its charging network in Austria. Customers of the mobility service provider now have access to approximately 1,250 charging points operated by the energy supplier Energie Steiermark.",
-        "url": "https://www.electrive.com/2026/04/28/austria-dkv-mobility-integrates-charging-points-from-energie-steiermark/",
-        "source": "Electrive",
-        "date": "2026-04-28T14:30:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/dkv-mobility-energie-steiermark-ladestation-dc-hpc-2026-1-400x267.jpg"
-      },
-      {
-        "id": "a405a416936e",
-        "title": "VW ID.3 now Germany’s most popular battery-electric car",
-        "summary": "The ID.3 has long been among the top vehicles in the German Federal Motor Transport Authority's monthly registration figures. However, the Tesla Model Y always led the way - that is, until January 1, 2026, when the Volkswagen took the top spot.",
-        "url": "https://www.electrive.com/2026/04/28/vw-id-3-now-germanys-most-popular-battery-electric-car/",
-        "source": "Electrive",
-        "date": "2026-04-28T13:30:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2024/03/volkswagen-id3-gtx-2024-10-min-400x267.jpg"
-      },
-      {
         "id": "2f72d2e3794d",
         "title": "ITS ISTANBUL: Nordic-Baltic delegation promotes smart transport expansion in Turkey",
         "summary": "Finland and Estonia joined forces at the ITS European Congress in Istanbul this week as part of a broader Nordic-Baltic push to open new export markets in Turkey's fast-developing intelligent [...] The post ITS ISTANBUL: Nordic-Baltic delegation promotes smart transport expansion in Turkey appeared …",
@@ -676,16 +706,6 @@
         "date": "2026-04-28T08:06:12Z",
         "category": "industria",
         "image": "https://s44873.pcdn.co/wp-content/uploads/2026/04/Nordics.png"
-      },
-      {
-        "id": "54c2015ecc37",
-        "title": "$1.1B available for railroad grade-crossing safety",
-        "summary": "The Crossing Safety Program aims to address the over 2,000 collisions and nearly 300 fatalities yearly since 2021.",
-        "url": "https://www.smartcitiesdive.com/news/fra-railroad-grade-crossing-safety/818522/",
-        "source": "Smart Cities Dive",
-        "date": "2026-04-27T16:20:00Z",
-        "category": "industria",
-        "image": "https://imgproxy.divecdn.com/1V1kd5qXUGpyBPVxxBbqCmFm_uSd75tVZZF0t8YLjcQ/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy05NTgzMjI5Mi5qcGc=.webp"
       },
       {
         "id": "79fbb7497b48",
@@ -810,14 +830,14 @@
     ],
     "regulacion": [
       {
-        "id": "247f4a879972",
-        "title": "ITS European Congress 2026: Telecoms and ITS worlds move closer",
-        "summary": "ITS European Congress 2026: Telecoms and ITS worlds move closer Ertico - ITS Europe and the 6G Smart Networks and Services Industry Association (6G-IA) signed a partnership agreement at the 17th ITS European Congress in Istanbul. The idea is to foster closer cooperation between the intelligent trans…",
-        "url": "https://www.itsinternational.com/news/its-european-congress-2026-telecoms-and-its-worlds-move-closer",
-        "source": "ITS International",
-        "date": "2026-04-30T05:42:28Z",
+        "id": "4946345f48f0",
+        "title": "Tharsis’ innovative e-ship project receives €21 Million in funding",
+        "summary": "The Dutch firm Tharsis Ship Management has received funding from the EU Innovation Fund for its eSeaRiverBarge project. The project includes the construction and operation of two zero-emission container ships for deployment between the Netherlands and the United Kingdom.",
+        "url": "https://www.electrive.com/2026/04/30/tharsis-innovative-e-ship-project-receives-e21-million-in-funding/",
+        "source": "Electrive",
+        "date": "2026-04-30T14:00:00Z",
         "category": "regulacion",
-        "image": "https://www.itsinternational.com/sites/default/files/2026-04/Ertico%206G.jpg"
+        "image": "https://www.electrive.com/media/2026/04/tharsis-ship-management-eseariverbarge-e-schiffe-niederlande-2026-400x267.jpg"
       },
       {
         "id": "861c25f4279e",
@@ -828,16 +848,6 @@
         "date": "2026-04-29T16:16:00Z",
         "category": "regulacion",
         "image": "https://imgproxy.divecdn.com/2oUF350ed5iuybL8oT5ekuSvkKhFcz79b-RaYzOiUBg/g:nowe:0:34/c:2500:1412/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNDU1MjkzOTk3LmpwZw==.webp"
-      },
-      {
-        "id": "19248530cb0b",
-        "title": "Cities sue EPA for failing to uphold soot standard",
-        "summary": "&ldquo;By ignoring the legal responsibility to uphold its own rule, U.S. EPA is willfully abandoning the agency&rsquo;s duties under the Clean Air Act,&rdquo; California Air Resources Board Chair Lauren Sanchez said.",
-        "url": "https://www.smartcitiesdive.com/news/cities-sue-epa-soot-standard-naaqs/818558/",
-        "source": "Smart Cities Dive",
-        "date": "2026-04-27T15:26:54Z",
-        "category": "regulacion",
-        "image": "https://imgproxy.divecdn.com/qdkVJ9sN18WHQ692ZPEHFf9VMiM0NcCT-sE8RuufADM/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMTgwMDcyODgxX3d6RzZpYk4uanBn.webp"
       },
       {
         "id": "f4e503ba0f6c",
