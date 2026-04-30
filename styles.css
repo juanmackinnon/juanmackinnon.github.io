@@ -205,6 +205,23 @@ body {
 .app-card:hover .app-link        { gap: 8px; }
 .app-card:hover .app-link::after { transform: translateX(4px); }
 
+.app-card-main {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap-md);
+}
+.app-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+.app-card-main > div {
+  min-width: 0;
+}
+
 /* ---- ESTADOS ---- */
 .loading-state, .empty-state, .error-state {
   text-align: center;
