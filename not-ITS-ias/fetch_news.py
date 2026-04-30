@@ -290,7 +290,7 @@ def main():
 
     import os
     output_path = os.path.join(os.path.dirname(__file__), "news.json")
-    with open(output_path, "w", ...) as f:
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(news, f, ensure_ascii=False, indent=2)
 
     print(f"\n✓ news.json written — {news['stats']['total']} articles across {len(news['categories'])} categories")
