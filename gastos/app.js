@@ -605,14 +605,9 @@ document.getElementById('btn-reset-data').addEventListener('click', () => {
 document.getElementById('gasto-fecha').valueAsDate    = new Date();
 document.getElementById('transfer-fecha').valueAsDate = new Date();
 
-// Aplicar tema guardado — clase unificada: style-accent
-if (datos.theme === 'accent') {
-  document.body.classList.add('style-accent');
-}
-
-actualizarUI();
-
 // Service Worker
 if (localStorage.getItem('gastos-theme') === 'light') {
   document.body.classList.add('style-light');
 }
+
+actualizarUI();
