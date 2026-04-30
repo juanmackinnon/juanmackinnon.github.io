@@ -3,15 +3,18 @@
     "name": "Not-ITS-ias",
     "path": "./not-ITS-ias/",
     "description": "Portal de noticias del Mundo ITS"
+    "icon": "./icons/not-its-ias.png"
   },
   {
     "name": "Gastos",
     "path": "./gastos/",
     "description": "Seguimiento de cuentas, gastos y transferencias"
+    "icon": "./icons/gastos.png"
   },
   {
     "name": "AntiPro",
     "path": "./antipro/",
     "description": "App para destrabarte y empezar tareas"
+    "icon": "./icons/antipro.png"
   }
 ]
