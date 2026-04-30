@@ -1,7 +1,7 @@
 {
-  "name": "Mis Apps - NewCo ITS",
-  "short_name": "Mis Apps",
-  "description": "Home de aplicaciones personales para NewCo - Sistemas de Transporte Inteligente",
+  "name": "JPM Personal APPs",
+  "short_name": "JPM Apps",
+  "description": "Home de aplicaciones personales para JPM",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
