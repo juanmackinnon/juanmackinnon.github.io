@@ -9,7 +9,6 @@ const STATIC_ASSETS = [
     './index.html',
     './styles.css',
     './app.js',
-    './icon.svg',
     './manifest.json',
     'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap',
 ];
