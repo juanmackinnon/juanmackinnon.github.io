@@ -1,39 +1,119 @@
 {
   "version": "1.0",
-  "updated_at": "2026-04-29T20:44:21Z",
+  "updated_at": "2026-04-30T11:55:31Z",
   "stats": {
-    "total": 75,
+    "total": 73,
     "by_category": {
-      "trafico": 7,
+      "trafico": 6,
       "smartcities": 2,
       "movilidad": 6,
-      "autonomos": 17,
-      "infraestructura": 2,
+      "autonomos": 16,
+      "infraestructura": 1,
       "industria": 36,
-      "regulacion": 5
+      "regulacion": 6
     },
     "by_source": {
+      "Electrive": 24,
       "AV International": 10,
+      "ITS International": 9,
       "Smart Cities Dive": 4,
-      "Electrive": 25,
-      "ITS International": 10,
       "Traffic Technology Today": 10,
       "Cities Today": 6,
       "ITS America": 10
     },
-    "updated_at": "2026-04-29T20:44:21Z"
+    "updated_at": "2026-04-30T11:55:31Z"
   },
   "categories": {
     "destacadas": [
       {
+        "id": "8ac070edce8d",
+        "title": "Washington State launches incentive programme for zero-emission trucks and equipment",
+        "summary": "A new state-funded programme in Washington aims to speed up the adoption of zero-emission commercial vehicles and equipment, offering support for a wide range of applications - ranging from trucks and buses to construction and agricultural machinery.",
+        "url": "https://www.electrive.com/2026/04/30/washington-state-launches-incentive-programme-for-zero-emission-trucks-and-equipment/",
+        "source": "Electrive",
+        "date": "2026-04-30T11:33:19Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/01/volvo-trucks-city-harvest-usa-north-america-2026-400x267.jpeg"
+      },
+      {
+        "id": "6f8a82c6e28f",
+        "title": "P-CAL project demonstrates autonomous logistics in live port environment",
+        "summary": "The North East Automotive Alliance (NEAA), together with the Port of Tyne, Oxa and industry and academic partners, has completed the Port-Connected and Automated Logistics (P-CAL) project, supporting the region’s development in connected and automated mobility. Delivered through the UK government's …",
+        "url": "https://www.autonomousvehicleinternational.com/news/off-highway/p-cal-project-demonstrates-autonomous-logistics-in-live-port-environment.html",
+        "source": "AV International",
+        "date": "2026-04-30T11:15:53Z",
+        "category": "autonomos",
+        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/a739a0.webp"
+      },
+      {
+        "id": "210c149fe861",
+        "title": "LGES secures major order for cylindrical cells – possibly from BMW",
+        "summary": "LG Energy Solution has secured new orders exceeding 100 GWh for its large 46-series cylindrical cells in the first quarter. According to Korean media reports, the orders come from a single customer: BMW.",
+        "url": "https://www.electrive.com/2026/04/30/lges-secures-major-order-for-cylindrical-cells-possibly-from-bmw/",
+        "source": "Electrive",
+        "date": "2026-04-30T11:00:00Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2024/08/lg-energy-solution-2024-002-400x267.jpg"
+      },
+      {
+        "id": "ab2d71991f86",
+        "title": "Avride AV fleet scales to 200 cars",
+        "summary": "Avride has announced that its fleet of autonomous robotaxis now numbers 200 vehicles. Built on the Hyundai Ioniq 5 platform, Avride’s vehicles are actively testing on the streets of Austin and Dallas in Texas. The company said it has added “dozens of new vehicles to the fleet, enabled by a streamlin…",
+        "url": "https://www.autonomousvehicleinternational.com/news/robotaxis/avride-av-fleet-scales-to-200-cars.html",
+        "source": "AV International",
+        "date": "2026-04-30T10:17:46Z",
+        "category": "autonomos",
+        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/1_FbMTfzkBKpCW6qCiVts3mA.webp"
+      },
+      {
+        "id": "1f938f1c4b95",
+        "title": "Ford’s EV losses narrow to $777M in Q1 2026 amid Model e profitability efforts",
+        "summary": "Ford slightly reduced losses in its EV division in Q1 of 2026, but its EV business remains firmly in the red. The company's Model e unit reported a loss of $777 million, an improvement of $72 million compared to the same period last year, as Ford continues working to make its electric cars profitabl…",
+        "url": "https://www.electrive.com/2026/04/30/fords-ev-losses-narrow-to-777m-in-q1-2026-amid-model-e-profitability-efforts/",
+        "source": "Electrive",
+        "date": "2026-04-30T10:00:00Z",
+        "category": "movilidad",
+        "image": "https://www.electrive.com/media/2026/04/2026-mustang-mach-e-gt-california-special-400x267.jpeg"
+      },
+      {
+        "id": "4b11848889c4",
+        "title": "Rocsys unveils next version of its robotic charging solution",
+        "summary": "Rocsys, a company specialising in robotic charging systems, has unveiled its new M1 solution, which enables the automated charging of multiple vehicles simultaneously for robotaxi fleets. The manufacturer also reports raising $13 million US dollars.",
+        "url": "https://www.electrive.com/2026/04/30/rocsys-unveils-next-version-of-its-robotic-charging-solution/",
+        "source": "Electrive",
+        "date": "2026-04-30T09:30:00Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/04/rocsys-m1-ladesystem-2026-400x267.jpg"
+      },
+      {
+        "id": "8f1239fc7345",
+        "title": "Tesla unveils its first mass-produced electric truck",
+        "summary": "Tesla's first electric truck has rolled off the new high-volume production line at Gigafactory Nevada. The automaker released an image of the truck alongside the workforce in a new section of the plant - thus confirming that Semi series production has begun.",
+        "url": "https://www.electrive.com/2026/04/30/tesla-unveils-its-first-mass-produced-electric-truck/",
+        "source": "Electrive",
+        "date": "2026-04-30T08:42:08Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/04/tesla-semi-produktion-usa-sparks-2026-400x267.jpg"
+      },
+      {
+        "id": "247f4a879972",
+        "title": "ITS European Congress 2026: Telecoms and ITS worlds move closer",
+        "summary": "ITS European Congress 2026: Telecoms and ITS worlds move closer Ertico - ITS Europe and the 6G Smart Networks and Services Industry Association (6G-IA) signed a partnership agreement at the 17th ITS European Congress in Istanbul. The idea is to foster closer cooperation between the intelligent trans…",
+        "url": "https://www.itsinternational.com/news/its-european-congress-2026-telecoms-and-its-worlds-move-closer",
+        "source": "ITS International",
+        "date": "2026-04-30T05:42:28Z",
+        "category": "regulacion",
+        "image": "https://www.itsinternational.com/sites/default/files/2026-04/Ertico%206G.jpg"
+      },
+      {
         "id": "acee6859ec99",
         "title": "EDITOR’S PICKS: Presentation highlights ahead of this year’s Autonomous Vehicle Tech Expo",
-        "summary": "This year's Autonomous Vehicle Tech Expo (June 23-25, 2026, Stuttgart, Germany) once again includes a three-day conference (rates apply) with over 80 expert speakers from the companies and organizations at the forefront of ADAS and automated driving development. AAVI has picked out some of the prese…",
+        "summary": "This year's Autonomous Vehicle Tech Expo (June 23-25, 2026, Stuttgart, Germany) once again includes a three-day conference (rates apply), with over 80 expert speakers from the companies and organizations at the forefront of ADAS and automated driving development. AAVI has picked out some of the pres…",
         "url": "https://www.autonomousvehicleinternational.com/news/expo/editors-picks-presentation-highlights-ahead-of-this-years-autonomous-vehicle-tech-expo.html",
         "source": "AV International",
         "date": "2026-04-29T17:02:03Z",
         "category": "autonomos",
-        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/filters_no_upscale.webp"
+        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/filters_no_upscale-e1777538738513.webp"
       },
       {
         "id": "770acb10b98e",
@@ -44,86 +124,6 @@
         "date": "2026-04-29T16:58:18Z",
         "category": "autonomos",
         "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/AdobeStock_1840776318.jpg"
-      },
-      {
-        "id": "861c25f4279e",
-        "title": "Cities urged to apply now for safe streets and roads grants",
-        "summary": "The U.S. Department of Transportation&rsquo;s SS4A funding opportunity may be its last if the program isn&rsquo;t renewed, a Stantec executive said.",
-        "url": "https://www.smartcitiesdive.com/news/apply-now-for-ss4a-grants-stantec/818763/",
-        "source": "Smart Cities Dive",
-        "date": "2026-04-29T16:16:00Z",
-        "category": "regulacion",
-        "image": "https://imgproxy.divecdn.com/2oUF350ed5iuybL8oT5ekuSvkKhFcz79b-RaYzOiUBg/g:nowe:0:34/c:2500:1412/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNDU1MjkzOTk3LmpwZw==.webp"
-      },
-      {
-        "id": "68eac686f2a3",
-        "title": "Joby demonstrates its air taxi in New York City",
-        "summary": "Air taxi developer Joby Aviation has conducted demonstration flights of a passenger electric vertical takeoff and landing aircraft (eVTOL) over New York City for the first time. The test campaign aimed to prepare for a regular flight taxi service between Manhattan and JFK Airport.",
-        "url": "https://www.electrive.com/2026/04/29/joby-demonstrates-its-air-taxi-in-new-york-city/",
-        "source": "Electrive",
-        "date": "2026-04-29T16:00:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/joby-flugtaxi-manhattan-new-york-city-400x267.jpeg"
-      },
-      {
-        "id": "008d2e7a1d07",
-        "title": "BYD Atto 3 Evo first drive: a major tech upgrade beneath familiar design",
-        "summary": "With the Atto 3 Evo, Chinese manufacturer BYD introduces a comprehensive technical upgrade to its compact SUV, while retaining much of its familiar exterior design. A new platform, updated drivetrains, and a revised interior aim to significantly move the model forward. Our first test drive reveals w…",
-        "url": "https://www.electrive.com/2026/04/29/byd-atto-3-evo-first-drive-a-major-tech-upgrade-beneath-familiar-design/",
-        "source": "Electrive",
-        "date": "2026-04-29T16:00:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/byd-atto-3-evo-fahrbericht-daniel-boennighausen-2026-02-min-400x267.jpg"
-      },
-      {
-        "id": "aea4551e4224",
-        "title": "ITS European Congress 2026: next generation in the spotlight",
-        "summary": "ITS European Congress 2026: next generation in the spotlight The ITS European Congress in Istanbul saw a new type of event for this gathering - the Talent Matchmaking session. Developed in partnership by Ertico - ITS Europe and the Young Mobility Network (YMN), the interactive event aimed to bridge …",
-        "url": "https://www.itsinternational.com/news/its-european-congress-2026-next-generation-spotlight",
-        "source": "ITS International",
-        "date": "2026-04-29T15:27:05Z",
-        "category": "infraestructura",
-        "image": "https://www.itsinternational.com/sites/default/files/inline-images/Young%20Mobility%20Network%20-%20Istanbul.jpg"
-      },
-      {
-        "id": "186ba8635e3a",
-        "title": "Dreame equips electric sports car with rocket propulsion",
-        "summary": "Chinese vacuum cleaner and appliance manufacturer Dreame has caused a stir with its plans for an electric sports car, the Nebula 1. The company has now also added a feature that is likely to fuel skepticism about the project: a rocket engine.",
-        "url": "https://www.electrive.com/2026/04/29/dreame-equips-electric-sports-car-with-additional-rocket-propulsion/",
-        "source": "Electrive",
-        "date": "2026-04-29T15:00:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/dreame-nebula-next-01-jet-edition-2026-1-400x267.jpg"
-      },
-      {
-        "id": "96cafcc02d1c",
-        "title": "Gebrüder Weiss to increase e-truck fleet to 25 by year-end",
-        "summary": "The Austrian logistics company Gebrüder Weiss currently deploys 14 Mercedes-Benz eActros 600 e-trucks, which are used daily for parcel, scheduled, and long-distance transport. By the end of 2026, however, its electric fleet is set to grow to a total of 25 trucks.",
-        "url": "https://www.electrive.com/2026/04/29/gebruder-weiss-to-increase-e-truck-fleet-to-25-by-year-end/",
-        "source": "Electrive",
-        "date": "2026-04-29T14:31:22Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/gebrueder-weiss-e-lkw-mercedes-eactros-600-oesterreich-2026-400x267.jpg"
-      },
-      {
-        "id": "56dfd9d2176d",
-        "title": "Auto China: BYD unveils electric sports car and family SUV",
-        "summary": "Chinese manufacturer BYD showcased the breadth of its offerings at the Beijing Auto Show with several new vehicle debuts. These included the Formula X sports car concept and two sedans from the Fangchengbao brand, as well as the large Sealion 08 electric SUV.",
-        "url": "https://www.electrive.com/2026/04/29/auto-china-byd-unveils-electric-sports-car-and-family-suv/",
-        "source": "Electrive",
-        "date": "2026-04-29T14:00:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/byd-auto-china-2026-1-400x267.jpg"
-      },
-      {
-        "id": "a5e99b3c7f77",
-        "title": "Will electrifying the UK’s heavy-duty trucks require more vehicles overall?",
-        "summary": "Researchers at Heriot-Watt University in the UK are testing whether electrifying heavy-duty goods vehicles (HGVs) could require larger fleets. The research is using real DHL fleet data to model the London–East Midlands Airport corridor and assess whether heavier batteries and longer charging stops m…",
-        "url": "https://www.electrive.com/2026/04/29/will-electrifying-the-uks-heavy-duty-trucks-require-more-vehicles-overall/",
-        "source": "Electrive",
-        "date": "2026-04-29T13:30:00Z",
-        "category": "smartcities",
-        "image": "https://www.electrive.com/media/2024/05/dhl-group-e-lkw-laden-ccs-400x267.jpg"
       }
     ],
     "trafico": [
@@ -136,16 +136,6 @@
         "date": "2026-04-29T11:29:20Z",
         "category": "trafico",
         "image": null
-      },
-      {
-        "id": "2f354bfb8af2",
-        "title": "Comark Lidar solution gives Tattile new focus",
-        "summary": "Comark Lidar solution gives Tattile new focus ahill Wed, 04/29/2026 - 11:36 ANPR camera maker Tattile has launched its first Lidar product - called Comark+ Laser - for vehicle classification. Tattile bought Comark , which specialises in laser-based volumetric vehicle measurement and classification f…",
-        "url": "https://www.itsinternational.com/products/comark-lidar-solution-gives-tattile-new-focus",
-        "source": "ITS International",
-        "date": "2026-04-29T10:36:27Z",
-        "category": "trafico",
-        "image": "https://www.itsinternational.com/sites/default/files/2026-04/Tattile%20CoMark%20-%20WEB.jpg"
       },
       {
         "id": "8df4aa1a90b0",
@@ -222,6 +212,16 @@
     ],
     "movilidad": [
       {
+        "id": "1f938f1c4b95",
+        "title": "Ford’s EV losses narrow to $777M in Q1 2026 amid Model e profitability efforts",
+        "summary": "Ford slightly reduced losses in its EV division in Q1 of 2026, but its EV business remains firmly in the red. The company's Model e unit reported a loss of $777 million, an improvement of $72 million compared to the same period last year, as Ford continues working to make its electric cars profitabl…",
+        "url": "https://www.electrive.com/2026/04/30/fords-ev-losses-narrow-to-777m-in-q1-2026-amid-model-e-profitability-efforts/",
+        "source": "Electrive",
+        "date": "2026-04-30T10:00:00Z",
+        "category": "movilidad",
+        "image": "https://www.electrive.com/media/2026/04/2026-mustang-mach-e-gt-california-special-400x267.jpeg"
+      },
+      {
         "id": "caa992a07c73",
         "title": "Geely’s Uber rival Caocao plans robotaxi initiative",
         "summary": "Caocao, the ride-hailing service from the Chinese automotive group Geely, plans to build a robotaxi fleet comprising 100,000 vehicles by 2030. The centrepiece of this initiative is the newly unveiled Eva Cab, a robotaxi designed for Level 4 autonomous operation from the ground-up that is set to ente…",
@@ -252,16 +252,6 @@
         "image": "https://www.electrive.com/media/2024/11/hyundai-ioniq-5-schriftzug-2024-400x267.jpg"
       },
       {
-        "id": "cfb563821c2d",
-        "title": "Hyundai and partners plan H₂ bus ecosystem in Seoul",
-        "summary": "Hyundai is collaborating with transportation companies and other stakeholders in the Seoul metropolitan area to advance the introduction of hydrogen-electric city buses. Among other measures, natural gas stations are to be converted to hydrogen.",
-        "url": "https://www.electrive.com/2026/04/28/hyundai-and-partners-plan-h%e2%82%82-bus-ecosystem-in-seoul/",
-        "source": "Electrive",
-        "date": "2026-04-28T13:00:49Z",
-        "category": "movilidad",
-        "image": "https://www.electrive.com/media/2026/04/hyundai-fcev-busse-seoul-2026-1-400x267.jpg"
-      },
-      {
         "id": "087fa075e752",
         "title": "Micromobility faces mounting insurance pressures",
         "summary": "Insurance is emerging as a critical constraint on micromobility growth, with rising premiums... The post Micromobility faces mounting insurance pressures appeared first on Cities Today .",
@@ -284,14 +274,34 @@
     ],
     "autonomos": [
       {
+        "id": "6f8a82c6e28f",
+        "title": "P-CAL project demonstrates autonomous logistics in live port environment",
+        "summary": "The North East Automotive Alliance (NEAA), together with the Port of Tyne, Oxa and industry and academic partners, has completed the Port-Connected and Automated Logistics (P-CAL) project, supporting the region’s development in connected and automated mobility. Delivered through the UK government's …",
+        "url": "https://www.autonomousvehicleinternational.com/news/off-highway/p-cal-project-demonstrates-autonomous-logistics-in-live-port-environment.html",
+        "source": "AV International",
+        "date": "2026-04-30T11:15:53Z",
+        "category": "autonomos",
+        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/a739a0.webp"
+      },
+      {
+        "id": "ab2d71991f86",
+        "title": "Avride AV fleet scales to 200 cars",
+        "summary": "Avride has announced that its fleet of autonomous robotaxis now numbers 200 vehicles. Built on the Hyundai Ioniq 5 platform, Avride’s vehicles are actively testing on the streets of Austin and Dallas in Texas. The company said it has added “dozens of new vehicles to the fleet, enabled by a streamlin…",
+        "url": "https://www.autonomousvehicleinternational.com/news/robotaxis/avride-av-fleet-scales-to-200-cars.html",
+        "source": "AV International",
+        "date": "2026-04-30T10:17:46Z",
+        "category": "autonomos",
+        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/1_FbMTfzkBKpCW6qCiVts3mA.webp"
+      },
+      {
         "id": "acee6859ec99",
         "title": "EDITOR’S PICKS: Presentation highlights ahead of this year’s Autonomous Vehicle Tech Expo",
-        "summary": "This year's Autonomous Vehicle Tech Expo (June 23-25, 2026, Stuttgart, Germany) once again includes a three-day conference (rates apply) with over 80 expert speakers from the companies and organizations at the forefront of ADAS and automated driving development. AAVI has picked out some of the prese…",
+        "summary": "This year's Autonomous Vehicle Tech Expo (June 23-25, 2026, Stuttgart, Germany) once again includes a three-day conference (rates apply), with over 80 expert speakers from the companies and organizations at the forefront of ADAS and automated driving development. AAVI has picked out some of the pres…",
         "url": "https://www.autonomousvehicleinternational.com/news/expo/editors-picks-presentation-highlights-ahead-of-this-years-autonomous-vehicle-tech-expo.html",
         "source": "AV International",
         "date": "2026-04-29T17:02:03Z",
         "category": "autonomos",
-        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/filters_no_upscale.webp"
+        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/filters_no_upscale-e1777538738513.webp"
       },
       {
         "id": "770acb10b98e",
@@ -344,16 +354,6 @@
         "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/03/1774389890-austin-1920x1080-1.webp"
       },
       {
-        "id": "dad97f2649cb",
-        "title": "VW subsidiary Moia expands autonomous shuttles to Orlando",
-        "summary": "Volkswagen Group's mobility brand Moia is partnering with Beep, a provider of shared autonomous mobility services based in Orlando, Florida. The goal is to establish a fleet of 5,000 autonomous vehicles for public transportation.",
-        "url": "https://www.electrive.com/2026/04/28/vw-subsidiary-moia-expands-autonomous-shuttles-to-orlando/",
-        "source": "Electrive",
-        "date": "2026-04-28T11:00:00Z",
-        "category": "autonomos",
-        "image": "https://www.electrive.com/media/2026/04/moia-beep-vw-id-buzz-ad-400x267.jpeg"
-      },
-      {
         "id": "78f9ba4af010",
         "title": "In this Issue – April 2026",
         "summary": "The April 2026 issue is now available online! Packed full of news, interviews and features, including: PonyWorld 2.0 : A self-improving physical AI engine for autonomous driving is helping to scale a robotaxi fleet to more than 3,000 vehicles by year end Cambridge Connector : The Connector deploymen…",
@@ -392,26 +392,6 @@
         "date": "2026-04-27T08:38:59Z",
         "category": "autonomos",
         "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/final-executive-image-e1777283781737.jpg"
-      },
-      {
-        "id": "bbb7ecf5efc2",
-        "title": "Autonomous mobility partnership to deploy ID. Buzz fleet in US public transit to start in Orlando",
-        "summary": "MOIA America, the autonomous mobility technology company within the Volkswagen Group, and Beep have announced a strategic partnership to introduce autonomous mobility for public transit operators across multiple US markets over the next decade, beginning in Orlando. MOIA America will provide the MOI…",
-        "url": "https://www.autonomousvehicleinternational.com/news/robotaxis/autonomous-mobility-partnership-to-deploy-id-buzz-fleet-in-us-public-transit-to-start-in-orlando.html",
-        "source": "AV International",
-        "date": "2026-04-24T12:01:56Z",
-        "category": "autonomos",
-        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/JON-FIX_VW_BEEP163929.webp"
-      },
-      {
-        "id": "e30fc724843e",
-        "title": "HPH Trust announces launch of Hong Kong’s first autonomous truck fleet",
-        "summary": "Hutchison Port Holdings Trust (HPH Trust) has unveiled a fleet of zero-emission autonomous trucks in Hong Kong. The AI-powered innovation is designed for efficient container transportation at all terminals, and supports the city’s objectives of smarter and greener port terminal operations. The launc…",
-        "url": "https://www.autonomousvehicleinternational.com/news/trucks/hph-trust-announces-launch-of-hong-kongs-first-autonomous-truck-fleet.html",
-        "source": "AV International",
-        "date": "2026-04-23T14:59:19Z",
-        "category": "autonomos",
-        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/hph-trust-e1776956740572.jpeg"
       },
       {
         "id": "e3bcea15a920",
@@ -456,16 +436,6 @@
     ],
     "infraestructura": [
       {
-        "id": "aea4551e4224",
-        "title": "ITS European Congress 2026: next generation in the spotlight",
-        "summary": "ITS European Congress 2026: next generation in the spotlight The ITS European Congress in Istanbul saw a new type of event for this gathering - the Talent Matchmaking session. Developed in partnership by Ertico - ITS Europe and the Young Mobility Network (YMN), the interactive event aimed to bridge …",
-        "url": "https://www.itsinternational.com/news/its-european-congress-2026-next-generation-spotlight",
-        "source": "ITS International",
-        "date": "2026-04-29T15:27:05Z",
-        "category": "infraestructura",
-        "image": "https://www.itsinternational.com/sites/default/files/inline-images/Young%20Mobility%20Network%20-%20Istanbul.jpg"
-      },
-      {
         "id": "4a7d3179e1bc",
         "title": "Q-Free delivers 50 millionth transponder alongside next-gen OBU1010 launch",
         "summary": "Tolling and intelligent transportation systems provider Q-Free has reached a landmark milestone, delivering its 50 millionth transponder unit in April 2026, an achievement the company says reflects more than four [...] The post Q-Free delivers 50 millionth transponder alongside next-gen OBU1010 laun…",
@@ -477,6 +447,46 @@
       }
     ],
     "industria": [
+      {
+        "id": "8ac070edce8d",
+        "title": "Washington State launches incentive programme for zero-emission trucks and equipment",
+        "summary": "A new state-funded programme in Washington aims to speed up the adoption of zero-emission commercial vehicles and equipment, offering support for a wide range of applications - ranging from trucks and buses to construction and agricultural machinery.",
+        "url": "https://www.electrive.com/2026/04/30/washington-state-launches-incentive-programme-for-zero-emission-trucks-and-equipment/",
+        "source": "Electrive",
+        "date": "2026-04-30T11:33:19Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/01/volvo-trucks-city-harvest-usa-north-america-2026-400x267.jpeg"
+      },
+      {
+        "id": "210c149fe861",
+        "title": "LGES secures major order for cylindrical cells – possibly from BMW",
+        "summary": "LG Energy Solution has secured new orders exceeding 100 GWh for its large 46-series cylindrical cells in the first quarter. According to Korean media reports, the orders come from a single customer: BMW.",
+        "url": "https://www.electrive.com/2026/04/30/lges-secures-major-order-for-cylindrical-cells-possibly-from-bmw/",
+        "source": "Electrive",
+        "date": "2026-04-30T11:00:00Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2024/08/lg-energy-solution-2024-002-400x267.jpg"
+      },
+      {
+        "id": "4b11848889c4",
+        "title": "Rocsys unveils next version of its robotic charging solution",
+        "summary": "Rocsys, a company specialising in robotic charging systems, has unveiled its new M1 solution, which enables the automated charging of multiple vehicles simultaneously for robotaxi fleets. The manufacturer also reports raising $13 million US dollars.",
+        "url": "https://www.electrive.com/2026/04/30/rocsys-unveils-next-version-of-its-robotic-charging-solution/",
+        "source": "Electrive",
+        "date": "2026-04-30T09:30:00Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/04/rocsys-m1-ladesystem-2026-400x267.jpg"
+      },
+      {
+        "id": "8f1239fc7345",
+        "title": "Tesla unveils its first mass-produced electric truck",
+        "summary": "Tesla's first electric truck has rolled off the new high-volume production line at Gigafactory Nevada. The automaker released an image of the truck alongside the workforce in a new section of the plant - thus confirming that Semi series production has begun.",
+        "url": "https://www.electrive.com/2026/04/30/tesla-unveils-its-first-mass-produced-electric-truck/",
+        "source": "Electrive",
+        "date": "2026-04-30T08:42:08Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/04/tesla-semi-produktion-usa-sparks-2026-400x267.jpg"
+      },
       {
         "id": "68eac686f2a3",
         "title": "Joby demonstrates its air taxi in New York City",
@@ -549,8 +559,8 @@
       },
       {
         "id": "698f94cdac28",
-        "title": "ITS ISTANBUL VIDEO: Visitors refelct on European Congress highlights",
-        "summary": "As the 17th ITS European Congress in Istanbul enters its final day, visitors to the event reflect on their highlights so far – including the networking opporunities, chances to learn [...] The post ITS ISTANBUL VIDEO: Visitors refelct on European Congress highlights appeared first on Traffic Technol…",
+        "title": "ITS ISTANBUL VIDEO: Visitors reflect on European Congress highlights",
+        "summary": "As the 17th ITS European Congress in Istanbul enters its final day, visitors to the event reflect on their highlights so far – including the networking opporunities, chances to learn [...] The post ITS ISTANBUL VIDEO: Visitors reflect on European Congress highlights appeared first on Traffic Technol…",
         "url": "https://www.traffictechnologytoday.com/videos/istanbul-video-visitors-refelct-on-its-european-congress-highlights.html",
         "source": "Traffic Technology Today",
         "date": "2026-04-29T11:50:30Z",
@@ -656,46 +666,6 @@
         "date": "2026-04-28T13:30:00Z",
         "category": "industria",
         "image": "https://www.electrive.com/media/2024/03/volkswagen-id3-gtx-2024-10-min-400x267.jpg"
-      },
-      {
-        "id": "ca7cc670dbcb",
-        "title": "E.ON and partners launch subscription-based truck charging package",
-        "summary": "Energy provider E.ON is partnering with finance specialist Neot and its shareholder Mitsui to introduce a subscription model for truck charging infrastructure across Europe. Billing is based on a fixed price per kilowatt-hour or a flexible 'Time-of-Use' tariff.",
-        "url": "https://www.electrive.com/2026/04/28/e-on-and-partners-launch-subscription-based-truck-charging-package/",
-        "source": "Electrive",
-        "date": "2026-04-28T12:30:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/e-lkw-ladestation-eon-2026-400x267.jpg"
-      },
-      {
-        "id": "5b0656287707",
-        "title": "Nio upgrades EVs to 900 volts using Onsemi chips",
-        "summary": "Nio is deepening its strategic partnership with the US semiconductor manufacturer Onsemi. The goal is to accelerate the transition from 400-volt to 900-volt architectures in Nio's EVs by leveraging Onsemi's EliteSiC M3e technology.",
-        "url": "https://www.electrive.com/2026/04/28/nio-upgrades-evs-to-900-volts-using-onsemi-chips/",
-        "source": "Electrive",
-        "date": "2026-04-28T12:00:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/nio-es9-2026-400x267.jpg"
-      },
-      {
-        "id": "d50fbd630364",
-        "title": "Hongqi eyes European collaboration with Stellantis",
-        "summary": "Hongqi, a brand owned by Chinese state-owned automaker FAW, is reportedly in talks with Stellantis to manufacture vehicles in one of Stellantis' Spanish plants as part of its expansion into Europe.",
-        "url": "https://www.electrive.com/2026/04/28/hongqi-eyes-european-collaboration-with-stellantis/",
-        "source": "Electrive",
-        "date": "2026-04-28T11:30:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2025/12/hongqi-e-hs9-2025-400x267.jpeg"
-      },
-      {
-        "id": "48c5d7a72bc4",
-        "title": "Audi recalls nearly 100,000 e-tron quattro and Q8 e-tron vehicles",
-        "summary": "Due to a potential braking issue, Audi is recalling 96,180 units of the e-tron quattro and Q8 e-tron worldwide in order to conduct workshop inspections. In Germany, more than 14,000 vehicles built since 2018 are affected.",
-        "url": "https://www.electrive.com/2026/04/28/audi-recalls-nearly-100000-e-tron-quattro-and-q8-e-tron-vehicles/",
-        "source": "Electrive",
-        "date": "2026-04-28T10:30:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2022/11/audi-q8-e-tron-sq8-2022-03-min-e1707127219550-400x267.png"
       },
       {
         "id": "2f72d2e3794d",
@@ -839,6 +809,16 @@
       }
     ],
     "regulacion": [
+      {
+        "id": "247f4a879972",
+        "title": "ITS European Congress 2026: Telecoms and ITS worlds move closer",
+        "summary": "ITS European Congress 2026: Telecoms and ITS worlds move closer Ertico - ITS Europe and the 6G Smart Networks and Services Industry Association (6G-IA) signed a partnership agreement at the 17th ITS European Congress in Istanbul. The idea is to foster closer cooperation between the intelligent trans…",
+        "url": "https://www.itsinternational.com/news/its-european-congress-2026-telecoms-and-its-worlds-move-closer",
+        "source": "ITS International",
+        "date": "2026-04-30T05:42:28Z",
+        "category": "regulacion",
+        "image": "https://www.itsinternational.com/sites/default/files/2026-04/Ertico%206G.jpg"
+      },
       {
         "id": "861c25f4279e",
         "title": "Cities urged to apply now for safe streets and roads grants",
