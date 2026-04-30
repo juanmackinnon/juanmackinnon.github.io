@@ -54,10 +54,18 @@ function createAppCard(app) {
     card.href      = app.path;
     card.className = 'app-card';
     card.title     = app.description;
+
+    const iconHtml = app.icon
+        ? `<img class="app-icon" src="${escapeHtml(app.icon)}" alt="" loading="lazy">`
+        : '';
+
     card.innerHTML = `
-        <div>
-            <h2 class="app-name">${escapeHtml(app.name)}</h2>
-            <p class="app-description">${escapeHtml(app.description)}</p>
+        <div class="app-card-main">
+            ${iconHtml}
+            <div>
+                <h2 class="app-name">${escapeHtml(app.name)}</h2>
+                <p class="app-description">${escapeHtml(app.description)}</p>
+            </div>
         </div>
         <span class="app-link">Abrir app</span>
     `;
