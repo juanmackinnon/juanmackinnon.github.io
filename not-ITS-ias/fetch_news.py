@@ -288,7 +288,9 @@ def main():
 
     news = build_news_json(all_articles)
 
-    with open("not-ITS-ias/news.json", "w", encoding="utf-8") as f:
+    import os
+    output_path = os.path.join(os.path.dirname(__file__), "news.json")
+    with open(output_path, "w", ...) as f:
         json.dump(news, f, ensure_ascii=False, indent=2)
 
     print(f"\n✓ news.json written — {news['stats']['total']} articles across {len(news['categories'])} categories")
