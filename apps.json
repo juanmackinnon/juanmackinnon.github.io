@@ -1,8 +1,8 @@
 [
   {
-    "name": "AntiPro",
-    "path": "./antipro/",
-    "description": "App para destrabarte y empezar tareas"
+    "name": "Not-ITS-ias",
+    "path": "./not-ITS-ias/",
+    "description": "Portal de noticias del Mundo ITS"
   },
   {
     "name": "Gastos",
@@ -10,8 +10,8 @@
     "description": "Seguimiento de cuentas, gastos y transferencias"
   },
   {
-    "name": "Not-ITS-ias",
-    "path": "./not-ITS-ias/",
-    "description": "Portal de noticias del Mundo ITS"
+    "name": "AntiPro",
+    "path": "./antipro/",
+    "description": "App para destrabarte y empezar tareas"
   }
 ]
