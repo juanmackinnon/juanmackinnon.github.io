@@ -1,30 +1,70 @@
 {
   "version": "1.0",
-  "updated_at": "2026-05-01T10:54:32Z",
+  "updated_at": "2026-05-01T16:15:03Z",
   "stats": {
-    "total": 74,
+    "total": 76,
     "by_category": {
-      "trafico": 7,
+      "trafico": 6,
       "smartcities": 3,
       "movilidad": 6,
       "autonomos": 17,
-      "infraestructura": 2,
-      "industria": 34,
-      "regulacion": 5
+      "infraestructura": 3,
+      "industria": 35,
+      "regulacion": 6
     },
     "by_source": {
+      "Smart Cities Dive": 5,
       "ITS International": 10,
-      "Electrive": 24,
       "AV International": 10,
-      "Smart Cities Dive": 4,
+      "Electrive": 24,
+      "Cities Today": 7,
       "Traffic Technology Today": 10,
-      "Cities Today": 6,
       "ITS America": 10
     },
-    "updated_at": "2026-05-01T10:54:32Z"
+    "updated_at": "2026-05-01T16:15:03Z"
   },
   "categories": {
     "destacadas": [
+      {
+        "id": "6cb526c6d84e",
+        "title": "Autonomous VW buses to begin microtransit service in Florida community",
+        "summary": "Beep and Moia plan to expand on-demand and scheduled circulator services throughout the country, Beep&rsquo;s CEO said.",
+        "url": "https://www.smartcitiesdive.com/news/beep-moia-volkswagen-microtransit-florida/819065/",
+        "source": "Smart Cities Dive",
+        "date": "2026-05-01T15:46:00Z",
+        "category": "industria",
+        "image": "https://imgproxy.divecdn.com/yvBE8nr82dJTbUxPSBbAjel2vxAjyHj_nnLgCH-bDOA/g:nowe:143:0/c:2336:1319/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9KT04tRklYX1ZXX0JFRVAxNjM5MjkuanBlZw==.webp"
+      },
+      {
+        "id": "3e97b0ca7b40",
+        "title": "Mayors look to shape AI policy — and the technology itself — in new coalition",
+        "summary": "&ldquo;Local governments must set the frameworks to shape the use and impacts of these technologies,&rdquo; said Boston Mayor Michelle Wu, a member of the global Mayors AI Forum.",
+        "url": "https://www.smartcitiesdive.com/news/mayors-ai-policy-forum-bloomberg-johns-hopkins/819084/",
+        "source": "Smart Cities Dive",
+        "date": "2026-05-01T15:01:07Z",
+        "category": "regulacion",
+        "image": "https://imgproxy.divecdn.com/Fii9UiNARsCKDPEsBQTF6cSnWVT271VV222GYLmSh5o/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjAzMjk5MTM2LmpwZw==.webp"
+      },
+      {
+        "id": "d6da7ebffc1a",
+        "title": "Inside the Future of Transport: From Istanbul to Birmingham 2027 🚀",
+        "summary": "Inside the Future of Transport: From Istanbul to Birmingham 2027 🚀 SBiswell Fri, 05/01/2026 - 14:40 Max Sugarman, chief executive of ITS UK, shares insights from the buzzing ITS European Congress in Istanbul, packed with innovation, networking and big ideas. Plus, why all eyes are now on Birmingham …",
+        "url": "https://www.itsinternational.com/video/inside-future-transport-istanbul-birmingham-2027",
+        "source": "ITS International",
+        "date": "2026-05-01T13:40:45Z",
+        "category": "industria",
+        "image": null
+      },
+      {
+        "id": "e4672c500d4a",
+        "title": "EXPO NEWS: Beamr explains what ML-safe compression requires across the AV pipeline",
+        "summary": "Beamr will be exhibiting at this year's Autonomous Vehicle Tech Expo (June 23-25, 2026, Stuttgart, Germany), and AAVI recently asked the company about what ML-safe compression requires across the AV pipeline, in an exclusive feature first published in the April 2026 issue, which you can read below: …",
+        "url": "https://www.autonomousvehicleinternational.com/news/expo/expo-news-beamr-explains-what-ml-safe-compression-requires-across-the-av-pipeline.html",
+        "source": "AV International",
+        "date": "2026-05-01T12:28:58Z",
+        "category": "autonomos",
+        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/05/AVI-1-26-TP-BeamR-SLKR.jpg"
+      },
       {
         "id": "08609020a4fe",
         "title": "ITS America 2026: Detroit's smart roads & tech tours",
@@ -66,77 +106,27 @@
         "image": "https://www.electrive.com/media/2026/04/allego-app-2026-1-400x267.jpg"
       },
       {
-        "id": "55cef57124e0",
-        "title": "Telent reappointed for Wiltshire signal maintenance",
-        "summary": "Telent reappointed for Wiltshire signal maintenance Telent has been reappointed by an English local authority to maintain its traffic signal network following a competitive tender process. Under the renewed contract, Telent will provide proactive and reactive maintenance services in the southern Eng…",
-        "url": "https://www.itsinternational.com/news/telent-reappointed-wiltshire-signal-maintenance",
-        "source": "ITS International",
-        "date": "2026-04-30T23:15:00Z",
-        "category": "trafico",
-        "image": "https://www.itsinternational.com/sites/default/files/2026-04/dreamstime_s_123513749%20%281%29.jpg"
-      },
-      {
-        "id": "20d51c9e71da",
-        "title": "How transit agencies can hire and keep front-line workers",
-        "summary": "An Urban Institute researcher predicts that &ldquo;under current trends, the cost of service will go up over time.&rdquo;",
-        "url": "https://www.smartcitiesdive.com/news/transit-agencies-frontline-worker-recruit-retain/818892/",
-        "source": "Smart Cities Dive",
-        "date": "2026-04-30T15:58:00Z",
+        "id": "5e5ce53ec901",
+        "title": "Most cities see safety gains from lower speeds",
+        "summary": "Three-quarters of European cities have reported reductions in road deaths and injuries after... The post Most cities see safety gains from lower speeds appeared first on Cities Today .",
+        "url": "https://cities-today.com/most-cities-see-safety-gains-from-lower-speeds/",
+        "source": "Cities Today",
+        "date": "2026-05-01T02:25:31Z",
         "category": "industria",
         "image": null
       },
       {
-        "id": "31ac488d2b06",
-        "title": "Fan builds LEGO version of Renault 5 Turbo 3E – official model could follow",
-        "summary": "A British LEGO fan has recreated the all-electric Renault 5 Turbo 3E as a detailed brick-built model - before the real vehicle even reaches production. The idea has attracted so much attention that Renault is now backing a campaign to turn it into an official Lego set.",
-        "url": "https://www.electrive.com/2026/04/30/fan-builds-lego-version-of-renault-5-turbo-3e-official-model-could-follow/",
-        "source": "Electrive",
-        "date": "2026-04-30T15:30:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/dave-collins-lego-renault-5-turbo-3e-r5-t3e-1-400x267.jpeg"
-      },
-      {
-        "id": "6b93f3a0f2e8",
-        "title": "This New York City leader unlocked a century of data, turning paper files into actionable intelligence",
-        "summary": "Smart Cities Dive Public Service Award winner Janet Aristy is modernizing New York City's infrastructure systems while empowering the next generation of public servants.",
-        "url": "https://www.smartcitiesdive.com/news/smart-cities-dive-public-service-award-janet-aristy/818883/",
-        "source": "Smart Cities Dive",
-        "date": "2026-04-30T14:28:00Z",
-        "category": "smartcities",
-        "image": null
-      },
-      {
-        "id": "4946345f48f0",
-        "title": "Tharsis’ innovative e-ship project receives €21 Million in funding",
-        "summary": "The Dutch firm Tharsis Ship Management has received funding from the EU Innovation Fund for its eSeaRiverBarge project. The project includes the construction and operation of two zero-emission container ships for deployment between the Netherlands and the United Kingdom.",
-        "url": "https://www.electrive.com/2026/04/30/tharsis-innovative-e-ship-project-receives-e21-million-in-funding/",
-        "source": "Electrive",
-        "date": "2026-04-30T14:00:00Z",
-        "category": "regulacion",
-        "image": "https://www.electrive.com/media/2026/04/tharsis-ship-management-eseariverbarge-e-schiffe-niederlande-2026-400x267.jpg"
-      },
-      {
-        "id": "b3c464e0c8e8",
-        "title": "Moto to ‘quadruple’ number of EV charging bays",
-        "summary": "Moto Hospitality, the UK motorway services operator, has announced a fourfold increase in the number of EV charging bays at its sites 'in the coming years'. It is also planning 15 eHGV superhub sites with over 100 charging bays for use by electric freight.",
-        "url": "https://www.electrive.com/2026/04/30/moto-to-quadruple-number-of-ev-charging-bays/",
-        "source": "Electrive",
-        "date": "2026-04-30T12:00:00Z",
+        "id": "24ea2b384320",
+        "title": "New system gives Brighton real-time control of highways",
+        "summary": "Brighton &#38; Hove City Council has implemented a new asset management system across... The post New system gives Brighton real-time control of highways appeared first on Cities Today .",
+        "url": "https://cities-today.com/new-system-gives-brighton-real-time-control-of-highways/",
+        "source": "Cities Today",
+        "date": "2026-04-30T22:05:08Z",
         "category": "infraestructura",
-        "image": "https://www.electrive.com/media/2026/04/3manfactory-moto-charge-toddington-activation-3ma20112025-0166-large-1536x1024-cropped-400x267.jpeg"
+        "image": null
       }
     ],
     "trafico": [
-      {
-        "id": "55cef57124e0",
-        "title": "Telent reappointed for Wiltshire signal maintenance",
-        "summary": "Telent reappointed for Wiltshire signal maintenance Telent has been reappointed by an English local authority to maintain its traffic signal network following a competitive tender process. Under the renewed contract, Telent will provide proactive and reactive maintenance services in the southern Eng…",
-        "url": "https://www.itsinternational.com/news/telent-reappointed-wiltshire-signal-maintenance",
-        "source": "ITS International",
-        "date": "2026-04-30T23:15:00Z",
-        "category": "trafico",
-        "image": "https://www.itsinternational.com/sites/default/files/2026-04/dreamstime_s_123513749%20%281%29.jpg"
-      },
       {
         "id": "01bd592c962a",
         "title": "Sensys Gatso wins Schenectady school zone speed enforcement contract",
@@ -294,6 +284,16 @@
     ],
     "autonomos": [
       {
+        "id": "e4672c500d4a",
+        "title": "EXPO NEWS: Beamr explains what ML-safe compression requires across the AV pipeline",
+        "summary": "Beamr will be exhibiting at this year's Autonomous Vehicle Tech Expo (June 23-25, 2026, Stuttgart, Germany), and AAVI recently asked the company about what ML-safe compression requires across the AV pipeline, in an exclusive feature first published in the April 2026 issue, which you can read below: …",
+        "url": "https://www.autonomousvehicleinternational.com/news/expo/expo-news-beamr-explains-what-ml-safe-compression-requires-across-the-av-pipeline.html",
+        "source": "AV International",
+        "date": "2026-05-01T12:28:58Z",
+        "category": "autonomos",
+        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/05/AVI-1-26-TP-BeamR-SLKR.jpg"
+      },
+      {
         "id": "08609020a4fe",
         "title": "ITS America 2026: Detroit's smart roads & tech tours",
         "summary": "ITS America 2026: Detroit's smart roads & tech tours ITS America Conference & Expo 2026 , organised in partnership by RX Global and ITS America, is just over one month away. ITS International readers can claim 30% off registration by clicking this discount code: itsamericaevents2026.com/ITSInternati…",
@@ -414,16 +414,6 @@
         "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/770556a0-5682-42af-a809-86fe483ce1a9-e1777297833469.jpg"
       },
       {
-        "id": "c8a0aca45121",
-        "title": "Focal Point Positioning to showcase Precise+ high-precision GNSS technology at ENC 2026",
-        "summary": "UK-based GNSS software provider Focal Point Positioning will present Precise+, its high-precision GNSS technology, at the European Navigation Conference (April 28-30, 2026, Vienna, Austria), highlighting how its Supercorrelation approach enhances carrier-phase positioning. On the first day of the co…",
-        "url": "https://www.autonomousvehicleinternational.com/news/localization-gnss/focal-point-positioning-to-showcase-precise-high-precision-gnss-technology-at-enc-2026.html",
-        "source": "AV International",
-        "date": "2026-04-27T10:14:39Z",
-        "category": "autonomos",
-        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/FCL090-Image-of-a-car-and-navigation-.jpg-1.jpeg"
-      },
-      {
         "id": "e3bcea15a920",
         "title": "New data reveals better traffic management for mega-events",
         "summary": "New data reveals better traffic management for mega-events ahill Mon, 12/15/2025 - 14:56 For cities hosting the World Cup in 2026, the Olympics in 2028, or other mega-events and major construction projects that disrupt travel, forecasting traffic impact and identifying strategies for efficiently rou…",
@@ -466,6 +456,16 @@
     ],
     "infraestructura": [
       {
+        "id": "24ea2b384320",
+        "title": "New system gives Brighton real-time control of highways",
+        "summary": "Brighton &#38; Hove City Council has implemented a new asset management system across... The post New system gives Brighton real-time control of highways appeared first on Cities Today .",
+        "url": "https://cities-today.com/new-system-gives-brighton-real-time-control-of-highways/",
+        "source": "Cities Today",
+        "date": "2026-04-30T22:05:08Z",
+        "category": "infraestructura",
+        "image": null
+      },
+      {
         "id": "b3c464e0c8e8",
         "title": "Moto to ‘quadruple’ number of EV charging bays",
         "summary": "Moto Hospitality, the UK motorway services operator, has announced a fourfold increase in the number of EV charging bays at its sites 'in the coming years'. It is also planning 15 eHGV superhub sites with over 100 charging bays for use by electric freight.",
@@ -488,6 +488,26 @@
     ],
     "industria": [
       {
+        "id": "6cb526c6d84e",
+        "title": "Autonomous VW buses to begin microtransit service in Florida community",
+        "summary": "Beep and Moia plan to expand on-demand and scheduled circulator services throughout the country, Beep&rsquo;s CEO said.",
+        "url": "https://www.smartcitiesdive.com/news/beep-moia-volkswagen-microtransit-florida/819065/",
+        "source": "Smart Cities Dive",
+        "date": "2026-05-01T15:46:00Z",
+        "category": "industria",
+        "image": "https://imgproxy.divecdn.com/yvBE8nr82dJTbUxPSBbAjel2vxAjyHj_nnLgCH-bDOA/g:nowe:143:0/c:2336:1319/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9KT04tRklYX1ZXX0JFRVAxNjM5MjkuanBlZw==.webp"
+      },
+      {
+        "id": "d6da7ebffc1a",
+        "title": "Inside the Future of Transport: From Istanbul to Birmingham 2027 🚀",
+        "summary": "Inside the Future of Transport: From Istanbul to Birmingham 2027 🚀 SBiswell Fri, 05/01/2026 - 14:40 Max Sugarman, chief executive of ITS UK, shares insights from the buzzing ITS European Congress in Istanbul, packed with innovation, networking and big ideas. Plus, why all eyes are now on Birmingham …",
+        "url": "https://www.itsinternational.com/video/inside-future-transport-istanbul-birmingham-2027",
+        "source": "ITS International",
+        "date": "2026-05-01T13:40:45Z",
+        "category": "industria",
+        "image": null
+      },
+      {
         "id": "56f3d5721046",
         "title": "smart returns to its roots — and scales up in Europe: Interview with CEO smart Europe Wolfgang Ufer",
         "summary": "smart is expanding its electric portfolio — but the return of the two-seater could redefine the brand. In his first major interview as CEO of smart in Europe, Wolfgang Ufer outlines growth plans, market dynamics and why the upcoming #2 marks a turning point for smart.",
@@ -506,6 +526,16 @@
         "date": "2026-05-01T08:00:00Z",
         "category": "industria",
         "image": "https://www.electrive.com/media/2026/04/allego-app-2026-1-400x267.jpg"
+      },
+      {
+        "id": "5e5ce53ec901",
+        "title": "Most cities see safety gains from lower speeds",
+        "summary": "Three-quarters of European cities have reported reductions in road deaths and injuries after... The post Most cities see safety gains from lower speeds appeared first on Cities Today .",
+        "url": "https://cities-today.com/most-cities-see-safety-gains-from-lower-speeds/",
+        "source": "Cities Today",
+        "date": "2026-05-01T02:25:31Z",
+        "category": "industria",
+        "image": null
       },
       {
         "id": "20d51c9e71da",
@@ -688,16 +718,6 @@
         "image": "https://www.electrive.com/media/2026/04/hyundai-staria-electric-front-three-quarter-cropped-400x267.jpeg"
       },
       {
-        "id": "36bda67b4c6f",
-        "title": "Joby Aviation air taxi takes flight in NYC",
-        "summary": "The air taxi developer and the Federal Aviation Administration are demonstrating advanced air mobility in a nationwide tour.",
-        "url": "https://www.smartcitiesdive.com/news/joby-aviation-air-taxi-flight-nyc/818648/",
-        "source": "Smart Cities Dive",
-        "date": "2026-04-28T15:46:00Z",
-        "category": "industria",
-        "image": "https://imgproxy.divecdn.com/ER608Vm0UDUWxCrUHulVcItWiAzEQ0hVTGkl6I-KeEM/g:nowe:0:254/c:2500:1412/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8zOGYwNzk4ZWUzZjBlNTdmNDQxNWU0NjVmM2RkYjFlMGU5MmNhMDYzLTI1MDB3LmpwZWc=.webp"
-      },
-      {
         "id": "2f72d2e3794d",
         "title": "ITS ISTANBUL: Nordic-Baltic delegation promotes smart transport expansion in Turkey",
         "summary": "Finland and Estonia joined forces at the ITS European Congress in Istanbul this week as part of a broader Nordic-Baltic push to open new export markets in Turkey's fast-developing intelligent [...] The post ITS ISTANBUL: Nordic-Baltic delegation promotes smart transport expansion in Turkey appeared …",
@@ -724,16 +744,6 @@
         "url": "https://cities-today.com/san-jose-moves-govai-coalition-into-non-profit-model/",
         "source": "Cities Today",
         "date": "2026-04-15T07:20:42Z",
-        "category": "industria",
-        "image": null
-      },
-      {
-        "id": "b464461b498a",
-        "title": "New York unveils new in-house MTA app",
-        "summary": "New York’s transit authority has launched a redesigned mobile app for subway and... The post New York unveils new in-house MTA app appeared first on Cities Today .",
-        "url": "https://cities-today.com/new-york-unveils-new-in-house-mta-app/",
-        "source": "Cities Today",
-        "date": "2026-03-30T12:37:55Z",
         "category": "industria",
         "image": null
       },
@@ -829,6 +839,16 @@
       }
     ],
     "regulacion": [
+      {
+        "id": "3e97b0ca7b40",
+        "title": "Mayors look to shape AI policy — and the technology itself — in new coalition",
+        "summary": "&ldquo;Local governments must set the frameworks to shape the use and impacts of these technologies,&rdquo; said Boston Mayor Michelle Wu, a member of the global Mayors AI Forum.",
+        "url": "https://www.smartcitiesdive.com/news/mayors-ai-policy-forum-bloomberg-johns-hopkins/819084/",
+        "source": "Smart Cities Dive",
+        "date": "2026-05-01T15:01:07Z",
+        "category": "regulacion",
+        "image": "https://imgproxy.divecdn.com/Fii9UiNARsCKDPEsBQTF6cSnWVT271VV222GYLmSh5o/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjAzMjk5MTM2LmpwZw==.webp"
+      },
       {
         "id": "4946345f48f0",
         "title": "Tharsis’ innovative e-ship project receives €21 Million in funding",
