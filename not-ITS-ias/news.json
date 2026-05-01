@@ -1,30 +1,80 @@
 {
   "version": "1.0",
-  "updated_at": "2026-04-30T22:13:20Z",
+  "updated_at": "2026-05-01T10:54:32Z",
   "stats": {
     "total": 74,
     "by_category": {
-      "trafico": 6,
+      "trafico": 7,
       "smartcities": 3,
       "movilidad": 6,
-      "autonomos": 16,
+      "autonomos": 17,
       "infraestructura": 2,
-      "industria": 36,
+      "industria": 34,
       "regulacion": 5
     },
     "by_source": {
-      "Smart Cities Dive": 4,
-      "Electrive": 24,
       "ITS International": 10,
+      "Electrive": 24,
       "AV International": 10,
+      "Smart Cities Dive": 4,
       "Traffic Technology Today": 10,
       "Cities Today": 6,
       "ITS America": 10
     },
-    "updated_at": "2026-04-30T22:13:20Z"
+    "updated_at": "2026-05-01T10:54:32Z"
   },
   "categories": {
     "destacadas": [
+      {
+        "id": "08609020a4fe",
+        "title": "ITS America 2026: Detroit's smart roads & tech tours",
+        "summary": "ITS America 2026: Detroit's smart roads & tech tours ITS America Conference & Expo 2026 , organised in partnership by RX Global and ITS America, is just over one month away. ITS International readers can claim 30% off registration by clicking this discount code: itsamericaevents2026.com/ITSInternati…",
+        "url": "https://www.itsinternational.com/news/its-america-2026-detroits-smart-roads-tech-tours",
+        "source": "ITS International",
+        "date": "2026-05-01T10:15:00Z",
+        "category": "autonomos",
+        "image": "https://www.itsinternational.com/sites/default/files/2026-05/dreamstime_s_439407786.jpg"
+      },
+      {
+        "id": "56f3d5721046",
+        "title": "smart returns to its roots — and scales up in Europe: Interview with CEO smart Europe Wolfgang Ufer",
+        "summary": "smart is expanding its electric portfolio — but the return of the two-seater could redefine the brand. In his first major interview as CEO of smart in Europe, Wolfgang Ufer outlines growth plans, market dynamics and why the upcoming #2 marks a turning point for smart.",
+        "url": "https://www.electrive.com/2026/05/01/smart-returns-to-its-roots-and-scales-up-in-europe-interview-with-ceo-smart-europe-wolfgang-ufer/",
+        "source": "Electrive",
+        "date": "2026-05-01T10:00:00Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/04/smart-2-hintergrund-background-neu5-400x267.jpg"
+      },
+      {
+        "id": "0c2b4328f26f",
+        "title": "Humanetics launches testing platform to improve efficiency and support NCAP 2026 requirements",
+        "summary": "As ADAS validation becomes more complex and resource intensive, Humanetics has launched UFOnext, a next-generation advanced driver assistance systems (ADAS) testing platform designed to meet the growing demands of testing protocols while maximizing efficiency on the proving ground. According to the …",
+        "url": "https://www.autonomousvehicleinternational.com/news/adas/humanetics-launches-testing-platform-to-improve-efficiency-and-support-ncap-2026-requirements.html",
+        "source": "AV International",
+        "date": "2026-05-01T09:00:01Z",
+        "category": "autonomos",
+        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/05/2604_480x300_ufonext_pr.png-768x430-copy.jpg"
+      },
+      {
+        "id": "d117651637b3",
+        "title": "Allego launches new roaming app",
+        "summary": "Dutch charging provider Allego has released a new version of its app. From now on, not only Allego's own charging points are accessible through the app, but also those of other operators.",
+        "url": "https://www.electrive.com/2026/05/01/allego-launches-new-roaming-app/",
+        "source": "Electrive",
+        "date": "2026-05-01T08:00:00Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/04/allego-app-2026-1-400x267.jpg"
+      },
+      {
+        "id": "55cef57124e0",
+        "title": "Telent reappointed for Wiltshire signal maintenance",
+        "summary": "Telent reappointed for Wiltshire signal maintenance Telent has been reappointed by an English local authority to maintain its traffic signal network following a competitive tender process. Under the renewed contract, Telent will provide proactive and reactive maintenance services in the southern Eng…",
+        "url": "https://www.itsinternational.com/news/telent-reappointed-wiltshire-signal-maintenance",
+        "source": "ITS International",
+        "date": "2026-04-30T23:15:00Z",
+        "category": "trafico",
+        "image": "https://www.itsinternational.com/sites/default/files/2026-04/dreamstime_s_123513749%20%281%29.jpg"
+      },
       {
         "id": "20d51c9e71da",
         "title": "How transit agencies can hire and keep front-line workers",
@@ -44,26 +94,6 @@
         "date": "2026-04-30T15:30:00Z",
         "category": "industria",
         "image": "https://www.electrive.com/media/2026/04/dave-collins-lego-renault-5-turbo-3e-r5-t3e-1-400x267.jpeg"
-      },
-      {
-        "id": "76e584c17302",
-        "title": "ITS European Congress 2026: Day 2 in Istanbul",
-        "summary": "ITS European Congress 2026: Day 2 in Istanbul SBiswell Thu, 04/30/2026 - 15:53 Join the ITS International team in Istanbul as day 2 of ITS European Congress kicks off... Join the ITS International team in Istanbul as day 2 of ITS European Congress kicks off... Join the ITS International team in Ista…",
-        "url": "https://www.itsinternational.com/video/its-european-congress-2026-day-2-istanbul",
-        "source": "ITS International",
-        "date": "2026-04-30T14:53:11Z",
-        "category": "industria",
-        "image": null
-      },
-      {
-        "id": "011da88a5293",
-        "title": "ITS European Congress 2026: Day 1 in Istanbul",
-        "summary": "ITS European Congress 2026: Day 1 in Istanbul SBiswell Thu, 04/30/2026 - 15:50 See what was on show at Day 1 of the ITS European Congress 2026! ITS International editor, Adam Hill, takes a look around the showfloor...",
-        "url": "https://www.itsinternational.com/video/its-european-congress-2026-day-1-istanbul",
-        "source": "ITS International",
-        "date": "2026-04-30T14:50:59Z",
-        "category": "industria",
-        "image": null
       },
       {
         "id": "6b93f3a0f2e8",
@@ -94,39 +124,19 @@
         "date": "2026-04-30T12:00:00Z",
         "category": "infraestructura",
         "image": "https://www.electrive.com/media/2026/04/3manfactory-moto-charge-toddington-activation-3ma20112025-0166-large-1536x1024-cropped-400x267.jpeg"
-      },
-      {
-        "id": "8ac070edce8d",
-        "title": "Washington State launches incentive programme for zero-emission trucks and equipment",
-        "summary": "A new state-funded programme in Washington aims to speed up the adoption of zero-emission commercial vehicles and equipment, offering support for a wide range of applications - ranging from trucks and buses to construction and agricultural machinery.",
-        "url": "https://www.electrive.com/2026/04/30/washington-state-launches-incentive-programme-for-zero-emission-trucks-and-equipment/",
-        "source": "Electrive",
-        "date": "2026-04-30T11:33:19Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/01/volvo-trucks-city-harvest-usa-north-america-2026-400x267.jpeg"
-      },
-      {
-        "id": "6f8a82c6e28f",
-        "title": "P-CAL project demonstrates autonomous logistics in live port environment",
-        "summary": "The North East Automotive Alliance (NEAA), together with the Port of Tyne, Oxa and industry and academic partners, has completed the Port-Connected and Automated Logistics (P-CAL) project, supporting the region’s development in connected and automated mobility. Delivered through the UK government's …",
-        "url": "https://www.autonomousvehicleinternational.com/news/off-highway/p-cal-project-demonstrates-autonomous-logistics-in-live-port-environment.html",
-        "source": "AV International",
-        "date": "2026-04-30T11:15:53Z",
-        "category": "autonomos",
-        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/a739a0.webp"
-      },
-      {
-        "id": "210c149fe861",
-        "title": "LGES secures major order for cylindrical cells – possibly from BMW",
-        "summary": "LG Energy Solution has secured new orders exceeding 100 GWh for its large 46-series cylindrical cells in the first quarter. According to Korean media reports, the orders come from a single customer: BMW.",
-        "url": "https://www.electrive.com/2026/04/30/lges-secures-major-order-for-cylindrical-cells-possibly-from-bmw/",
-        "source": "Electrive",
-        "date": "2026-04-30T11:00:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2024/08/lg-energy-solution-2024-002-400x267.jpg"
       }
     ],
     "trafico": [
+      {
+        "id": "55cef57124e0",
+        "title": "Telent reappointed for Wiltshire signal maintenance",
+        "summary": "Telent reappointed for Wiltshire signal maintenance Telent has been reappointed by an English local authority to maintain its traffic signal network following a competitive tender process. Under the renewed contract, Telent will provide proactive and reactive maintenance services in the southern Eng…",
+        "url": "https://www.itsinternational.com/news/telent-reappointed-wiltshire-signal-maintenance",
+        "source": "ITS International",
+        "date": "2026-04-30T23:15:00Z",
+        "category": "trafico",
+        "image": "https://www.itsinternational.com/sites/default/files/2026-04/dreamstime_s_123513749%20%281%29.jpg"
+      },
       {
         "id": "01bd592c962a",
         "title": "Sensys Gatso wins Schenectady school zone speed enforcement contract",
@@ -284,6 +294,26 @@
     ],
     "autonomos": [
       {
+        "id": "08609020a4fe",
+        "title": "ITS America 2026: Detroit's smart roads & tech tours",
+        "summary": "ITS America 2026: Detroit's smart roads & tech tours ITS America Conference & Expo 2026 , organised in partnership by RX Global and ITS America, is just over one month away. ITS International readers can claim 30% off registration by clicking this discount code: itsamericaevents2026.com/ITSInternati…",
+        "url": "https://www.itsinternational.com/news/its-america-2026-detroits-smart-roads-tech-tours",
+        "source": "ITS International",
+        "date": "2026-05-01T10:15:00Z",
+        "category": "autonomos",
+        "image": "https://www.itsinternational.com/sites/default/files/2026-05/dreamstime_s_439407786.jpg"
+      },
+      {
+        "id": "0c2b4328f26f",
+        "title": "Humanetics launches testing platform to improve efficiency and support NCAP 2026 requirements",
+        "summary": "As ADAS validation becomes more complex and resource intensive, Humanetics has launched UFOnext, a next-generation advanced driver assistance systems (ADAS) testing platform designed to meet the growing demands of testing protocols while maximizing efficiency on the proving ground. According to the …",
+        "url": "https://www.autonomousvehicleinternational.com/news/adas/humanetics-launches-testing-platform-to-improve-efficiency-and-support-ncap-2026-requirements.html",
+        "source": "AV International",
+        "date": "2026-05-01T09:00:01Z",
+        "category": "autonomos",
+        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/05/2604_480x300_ufonext_pr.png-768x430-copy.jpg"
+      },
+      {
         "id": "6f8a82c6e28f",
         "title": "P-CAL project demonstrates autonomous logistics in live port environment",
         "summary": "The North East Automotive Alliance (NEAA), together with the Port of Tyne, Oxa and industry and academic partners, has completed the Port-Connected and Automated Logistics (P-CAL) project, supporting the region’s development in connected and automated mobility. Delivered through the UK government's …",
@@ -394,16 +424,6 @@
         "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/FCL090-Image-of-a-car-and-navigation-.jpg-1.jpeg"
       },
       {
-        "id": "e4d75ce36b09",
-        "title": "Pony.ai debuts new autonomous driving compute platform",
-        "summary": "Pony.ai has begun using a new autonomous driving domain controller – a high-performance compute system designed for Pony.ai’s L4 autonomous driving platform and also a broader set of customer applications across autonomous mobility. Developed in collaboration with Nvidia, the new controller is built…",
-        "url": "https://www.autonomousvehicleinternational.com/news/ai-sensor-fusion/pony-ai-debuts-new-autonomous-driving-compute-platform.html",
-        "source": "AV International",
-        "date": "2026-04-27T08:38:59Z",
-        "category": "autonomos",
-        "image": "https://www.autonomousvehicleinternational.com/wp-content/uploads/2026/04/final-executive-image-e1777283781737.jpg"
-      },
-      {
         "id": "e3bcea15a920",
         "title": "New data reveals better traffic management for mega-events",
         "summary": "New data reveals better traffic management for mega-events ahill Mon, 12/15/2025 - 14:56 For cities hosting the World Cup in 2026, the Olympics in 2028, or other mega-events and major construction projects that disrupt travel, forecasting traffic impact and identifying strategies for efficiently rou…",
@@ -468,6 +488,26 @@
     ],
     "industria": [
       {
+        "id": "56f3d5721046",
+        "title": "smart returns to its roots — and scales up in Europe: Interview with CEO smart Europe Wolfgang Ufer",
+        "summary": "smart is expanding its electric portfolio — but the return of the two-seater could redefine the brand. In his first major interview as CEO of smart in Europe, Wolfgang Ufer outlines growth plans, market dynamics and why the upcoming #2 marks a turning point for smart.",
+        "url": "https://www.electrive.com/2026/05/01/smart-returns-to-its-roots-and-scales-up-in-europe-interview-with-ceo-smart-europe-wolfgang-ufer/",
+        "source": "Electrive",
+        "date": "2026-05-01T10:00:00Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/04/smart-2-hintergrund-background-neu5-400x267.jpg"
+      },
+      {
+        "id": "d117651637b3",
+        "title": "Allego launches new roaming app",
+        "summary": "Dutch charging provider Allego has released a new version of its app. From now on, not only Allego's own charging points are accessible through the app, but also those of other operators.",
+        "url": "https://www.electrive.com/2026/05/01/allego-launches-new-roaming-app/",
+        "source": "Electrive",
+        "date": "2026-05-01T08:00:00Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/04/allego-app-2026-1-400x267.jpg"
+      },
+      {
         "id": "20d51c9e71da",
         "title": "How transit agencies can hire and keep front-line workers",
         "summary": "An Urban Institute researcher predicts that &ldquo;under current trends, the cost of service will go up over time.&rdquo;",
@@ -486,26 +526,6 @@
         "date": "2026-04-30T15:30:00Z",
         "category": "industria",
         "image": "https://www.electrive.com/media/2026/04/dave-collins-lego-renault-5-turbo-3e-r5-t3e-1-400x267.jpeg"
-      },
-      {
-        "id": "76e584c17302",
-        "title": "ITS European Congress 2026: Day 2 in Istanbul",
-        "summary": "ITS European Congress 2026: Day 2 in Istanbul SBiswell Thu, 04/30/2026 - 15:53 Join the ITS International team in Istanbul as day 2 of ITS European Congress kicks off... Join the ITS International team in Istanbul as day 2 of ITS European Congress kicks off... Join the ITS International team in Ista…",
-        "url": "https://www.itsinternational.com/video/its-european-congress-2026-day-2-istanbul",
-        "source": "ITS International",
-        "date": "2026-04-30T14:53:11Z",
-        "category": "industria",
-        "image": null
-      },
-      {
-        "id": "011da88a5293",
-        "title": "ITS European Congress 2026: Day 1 in Istanbul",
-        "summary": "ITS European Congress 2026: Day 1 in Istanbul SBiswell Thu, 04/30/2026 - 15:50 See what was on show at Day 1 of the ITS European Congress 2026! ITS International editor, Adam Hill, takes a look around the showfloor...",
-        "url": "https://www.itsinternational.com/video/its-european-congress-2026-day-1-istanbul",
-        "source": "ITS International",
-        "date": "2026-04-30T14:50:59Z",
-        "category": "industria",
-        "image": null
       },
       {
         "id": "8ac070edce8d",
@@ -668,16 +688,6 @@
         "image": "https://www.electrive.com/media/2026/04/hyundai-staria-electric-front-three-quarter-cropped-400x267.jpeg"
       },
       {
-        "id": "4e997a6a9ae7",
-        "title": "GWM Ora 5 launches in Europe this summer",
-        "summary": "Chinese automaker Great Wall has announced a summer 2026 launch date for the Ora 5 in Germany and Europe. The SUV marks the birth of a broader product family planned for the European market.",
-        "url": "https://www.electrive.com/2026/04/28/gwm-ora-5-launches-in-europe-this-summer/",
-        "source": "Electrive",
-        "date": "2026-04-28T16:00:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/great-wall-gwm-ora-5-2026-1-400x267.jpg"
-      },
-      {
         "id": "36bda67b4c6f",
         "title": "Joby Aviation air taxi takes flight in NYC",
         "summary": "The air taxi developer and the Federal Aviation Administration are demonstrating advanced air mobility in a nationwide tour.",
@@ -686,16 +696,6 @@
         "date": "2026-04-28T15:46:00Z",
         "category": "industria",
         "image": "https://imgproxy.divecdn.com/ER608Vm0UDUWxCrUHulVcItWiAzEQ0hVTGkl6I-KeEM/g:nowe:0:254/c:2500:1412/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8zOGYwNzk4ZWUzZjBlNTdmNDQxNWU0NjVmM2RkYjFlMGU5MmNhMDYzLTI1MDB3LmpwZWc=.webp"
-      },
-      {
-        "id": "2036734734ea",
-        "title": "Dansk Auto Logik uses eActros 600 as car transporter",
-        "summary": "Danish vehicle logistics company Dansk Auto Logik has begun using a fully electric car transporter based on the Mercedes-Benz eActros 600 for the first time. The electric truck transports passenger cars on a fixed route between Vamdrup, Denmark, and Bremerhaven in northern Germany, over 380 kilomete…",
-        "url": "https://www.electrive.com/2026/04/28/dansk-auto-logik-uses-eactros-600-as-car-transporter/",
-        "source": "Electrive",
-        "date": "2026-04-28T15:30:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/mercedes-benz-trucks-eactros-600-autotransporter-2026-400x267.jpg"
       },
       {
         "id": "2f72d2e3794d",
