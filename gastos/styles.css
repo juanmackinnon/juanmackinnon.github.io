@@ -5,15 +5,15 @@
 
 /* --- VARIABLES CSS (Temas) --- */
 :root {
-  /* Modo minimal (default) */
-  --bg-primary: #f8fafc;
-  --bg-card: #ffffff;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --border-color: #e2e8f0;
-  --shadow: rgba(0, 0, 0, 0.05);
+  /* DARK MODE (default) */
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --shadow: rgba(0, 0, 0, 0.3);
   
-  /* Colores de acento (ocultos en modo minimal) */
+  /* Colores de acento */
   --color-primary: #3b82f6;
   --color-primary-hover: #2563eb;
   --color-success: #10b981;
@@ -40,38 +40,20 @@
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-deep: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-deep: 0 10px 20px -5px rgba(0, 0, 0, 0.4);
 }
 
-/* Modo acentuado */
-body.theme-accent {
+/* LIGHT MODE (toggle manual con clase style-light) */
+body.style-light {
   --bg-primary: #f8fafc;
   --bg-card: #ffffff;
   --text-primary: #0f172a;
   --text-secondary: #475569;
-}
-
-/* Modo oscuro minimal */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: #0f172a;
-    --bg-card: #1e293b;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --border-color: #334155;
-    --shadow: rgba(0, 0, 0, 0.3);
-  }
-}
-
-/* Modo oscuro + acentuado */
-@media (prefers-color-scheme: dark) {
-  body.theme-accent {
-    --bg-primary: #0f172a;
-    --bg-card: #1e293b;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-  }
+  --border-color: #e2e8f0;
+  --shadow: rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-deep: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* --- RESET Y BASE --- */
