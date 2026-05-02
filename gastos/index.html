@@ -25,15 +25,13 @@
     <!-- Header -->
     <header class="header">
       <div class="header-content">
-        <div class="header-left">
-          <a href="../" class="btn-back" title="Volver al menú principal">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="15 18 9 12 15 6"/>
-            </svg>
-            <span>Menú</span>
-          </a>
-          <h1 class="app-title">Gastos</h1>
-        </div>
+        <a href="../" class="btn-back" title="Volver al menú principal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+          <span>Menú</span>
+        </a>
+        <h1 class="app-title">Gastos</h1>
         <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">◐</button>
       </div>
     </header>
@@ -63,20 +61,19 @@
         </div>
 
         <div class="card">
-          <p class="card-title">Gastos por categoría</p>
-          <div id="categorias-gastos"></div>
+          <p class="card-title">Total por categoría</p>
+          <div id="categorias-total"></div>
           <div class="summary-line">
             <span>Total gastado</span>
             <span class="summary-value" id="total-gastos">$0</span>
           </div>
-        </div>
-
-        <div class="card">
-          <p class="card-title">Ingresos por categoría</p>
-          <div id="categorias-ingresos"></div>
           <div class="summary-line">
             <span>Total ingresado</span>
             <span class="summary-value summary-value--ingreso" id="total-ingresos">$0</span>
+          </div>
+          <div class="summary-line">
+            <span>Balance</span>
+            <span class="summary-value" id="balance-categorias">$0</span>
           </div>
         </div>
 
