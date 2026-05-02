@@ -2,7 +2,7 @@
    GASTOS APP - SERVICE WORKER
    ======================================== */
 
-const CACHE_VERSION = 'gastos-v1';
+const CACHE_VERSION = 'gastos-v3';
 const CACHE_NAME = `${CACHE_VERSION}`;
 
 // Archivos a cachear
