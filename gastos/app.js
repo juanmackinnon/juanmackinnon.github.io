@@ -213,38 +213,38 @@ function actualizarUI() {
 }
 
 // --- RESUMEN ---
-function actualizarResumen() {
-  // Gastos por categoría
-  const elGastos = document.getElementById('categorias-gastos');
-  const catsConGasto = datos.categorias
-    .map(c => ({ ...c, gasto: calcularGastoPorCategoria(c.id) }))
-    .filter(c => c.gasto > 0);
+function calcularTotalPorCategoria(categoriaID) {
+  return calcularIngresoPorCategoria(categoriaID) - calcularGastoPorCategoria(categoriaID);
+}
 
-  elGastos.innerHTML = catsConGasto.length === 0
-    ? '<div class="empty-state">Sin gastos registrados</div>'
-    : catsConGasto.map(c => `
+function calcularBalance() {
+  return calcularTotalIngresos() - calcularTotalGastos();
+}
+
+function actualizarResumen() {
+  // Total unificado por categoría: ingresos suman y gastos restan.
+  const elCategorias = document.getElementById('categorias-total');
+  const catsConMovimiento = datos.categorias
+    .map(c => ({
+      ...c,
+      gasto: calcularGastoPorCategoria(c.id),
+      ingreso: calcularIngresoPorCategoria(c.id),
+      total: calcularTotalPorCategoria(c.id)
+    }))
+    .filter(c => c.gasto > 0 || c.ingreso > 0)
+    .sort((a, b) => Math.abs(b.total) - Math.abs(a.total));
+
+  elCategorias.innerHTML = catsConMovimiento.length === 0
+    ? '<div class="empty-state">Sin movimientos por categoría</div>'
+    : catsConMovimiento.map(c => `
         <div class="categoria-gasto-item">
           <span class="categoria-gasto-nombre">${escapeHtml(c.nombre)}</span>
-          <span class="categoria-gasto-total">${formatoDinero(c.gasto)}</span>
+          <span class="categoria-gasto-total ${c.total >= 0 ? 'categoria-ingreso-total' : ''}">${formatoDinero(c.total)}</span>
         </div>`).join('');
 
   document.getElementById('total-gastos').textContent = formatoDinero(calcularTotalGastos());
-
-  // Ingresos por categoría
-  const elIngresos = document.getElementById('categorias-ingresos');
-  const catsConIngreso = datos.categorias
-    .map(c => ({ ...c, ingreso: calcularIngresoPorCategoria(c.id) }))
-    .filter(c => c.ingreso > 0);
-
-  elIngresos.innerHTML = catsConIngreso.length === 0
-    ? '<div class="empty-state">Sin ingresos por categoría</div>'
-    : catsConIngreso.map(c => `
-        <div class="categoria-gasto-item">
-          <span class="categoria-gasto-nombre">${escapeHtml(c.nombre)}</span>
-          <span class="categoria-gasto-total categoria-ingreso-total">${formatoDinero(c.ingreso)}</span>
-        </div>`).join('');
-
   document.getElementById('total-ingresos').textContent = formatoDinero(calcularTotalIngresos());
+  document.getElementById('balance-categorias').textContent = formatoDinero(calcularBalance());
 
   // Últimos movimientos
   const elMovs = document.getElementById('ultimos-movimientos');
