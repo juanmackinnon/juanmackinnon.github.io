@@ -55,10 +55,7 @@ const stateEmpty    = $('stateEmpty');
 const stateErrorMsg = $('stateErrorMsg');
 const statsBar      = $('statsBar');
 const statsText     = $('statsText');
-const updateTime    = $('updateTime');
-const btnRefresh    = $('btnRefresh');
 const btnTheme      = $('btnTheme');
-const btnRetry      = $('btnRetry');
 const categoryNav   = $('categoryNav');
 const modalOverlay  = $('modalOverlay');
 const modalClose    = $('modalClose');
@@ -107,7 +104,6 @@ async function fetchNews(force = false) {
       throw new Error('news.json tiene estructura inválida');
     }
 
-    updateTimestamp(newsData.updated_at);
     renderCurrentCategory();
   } catch (err) {
     console.error('[Not-ITS-ias] fetch error:', err);
@@ -144,7 +140,7 @@ function renderCurrentCategory() {
   articlesGrid.appendChild(frag);
 
   // Stats
-  statsText.textContent = `${articles.length} artículos · actualizado ${formatTimeAgo(newsData.updated_at)}`;
+  statsText.textContent = `${articles.length} artículos`;
   statsBar.classList.remove('hidden');
 }
 
@@ -307,23 +303,7 @@ function formatTimeAgo(isoString) {
   } catch { return isoString; }
 }
 
-function updateTimestamp(isoString) {
-  updateTime.textContent = formatTimeAgo(isoString);
-}
 
-// ============================================================
-// REFRESH ANIMATION
-// ============================================================
-
-function startRefreshAnim() {
-  btnRefresh.classList.add('spinning');
-  btnRefresh.disabled = true;
-}
-
-function stopRefreshAnim() {
-  btnRefresh.classList.remove('spinning');
-  btnRefresh.disabled = false;
-}
 
 // ============================================================
 // ESCAPE HTML
@@ -349,15 +329,6 @@ categoryNav.addEventListener('click', e => {
   if (tab) switchCategory(tab.dataset.cat);
 });
 
-// Refresh button
-btnRefresh.addEventListener('click', async () => {
-  startRefreshAnim();
-  await fetchNews(true);
-  stopRefreshAnim();
-});
-
-// Retry button (error state)
-btnRetry.addEventListener('click', () => fetchNews(true));
 
 // Theme toggle
 btnTheme.addEventListener('click', toggleTheme);
@@ -406,3 +377,4 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
