@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updated_at": "2026-05-02T09:46:45Z",
+  "updated_at": "2026-05-02T15:34:52Z",
   "stats": {
     "total": 76,
     "by_category": {
@@ -13,18 +13,38 @@
       "regulacion": 6
     },
     "by_source": {
+      "Electrive": 24,
       "Smart Cities Dive": 5,
       "ITS International": 10,
       "AV International": 10,
-      "Electrive": 24,
       "Cities Today": 7,
       "Traffic Technology Today": 10,
       "ITS America": 10
     },
-    "updated_at": "2026-05-02T09:46:45Z"
+    "updated_at": "2026-05-02T15:34:52Z"
   },
   "categories": {
     "destacadas": [
+      {
+        "id": "222a2cba9bdd",
+        "title": "“Combining Chinese speed with our global system expertise” – Philipp Ibele of Bosch",
+        "summary": "Auto China 2026 closes its doors this weekend, but it has once again showcased many new models and technologies in the field of electromobility. How will developments in China shape Western electric vehicles, automakers, and suppliers in the future? Philipp Ibele worked for Bosch in China for many y…",
+        "url": "https://www.electrive.com/2026/05/02/combining-chinese-speed-with-our-global-system-expertise-philipp-ibele-of-bosch/",
+        "source": "Electrive",
+        "date": "2026-05-02T10:00:00Z",
+        "category": "movilidad",
+        "image": "https://www.electrive.com/media/2026/04/bosch-autonomes-fahren-hintergrund-background-2026-400x267.jpg"
+      },
+      {
+        "id": "7030452878e0",
+        "title": "Autonomous ‘BumbleB’ shuttle begins campus trials in Stuttgart mobility project",
+        "summary": "An autonomous electric shuttle developed by Bertrandt has entered real-world testing in Stuttgart as part of a Fraunhofer-led research project aimed at rethinking corporate mobility. The electric shuttle, called BumbleB, will operate on a trial basis across the Fraunhofer campus and connect it to a …",
+        "url": "https://www.electrive.com/2026/05/02/autonomous-bumbleb-shuttle-begins-campus-trials-in-stuttgart-mobility-projec/",
+        "source": "Electrive",
+        "date": "2026-05-02T08:00:00Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/04/bertrandt-bumbleb-fraunhofer-iao-projekt-izsmo-400x267.jpeg"
+      },
       {
         "id": "6cb526c6d84e",
         "title": "Autonomous VW buses to begin microtransit service in Florida community",
@@ -104,26 +124,6 @@
         "date": "2026-05-01T08:00:00Z",
         "category": "industria",
         "image": "https://www.electrive.com/media/2026/04/allego-app-2026-1-400x267.jpg"
-      },
-      {
-        "id": "5e5ce53ec901",
-        "title": "Most cities see safety gains from lower speeds",
-        "summary": "Three-quarters of European cities have reported reductions in road deaths and injuries after... The post Most cities see safety gains from lower speeds appeared first on Cities Today .",
-        "url": "https://cities-today.com/most-cities-see-safety-gains-from-lower-speeds/",
-        "source": "Cities Today",
-        "date": "2026-05-01T02:25:31Z",
-        "category": "industria",
-        "image": null
-      },
-      {
-        "id": "24ea2b384320",
-        "title": "New system gives Brighton real-time control of highways",
-        "summary": "Brighton &#38; Hove City Council has implemented a new asset management system across... The post New system gives Brighton real-time control of highways appeared first on Cities Today .",
-        "url": "https://cities-today.com/new-system-gives-brighton-real-time-control-of-highways/",
-        "source": "Cities Today",
-        "date": "2026-04-30T22:05:08Z",
-        "category": "infraestructura",
-        "image": null
       }
     ],
     "trafico": [
@@ -222,6 +222,16 @@
     ],
     "movilidad": [
       {
+        "id": "222a2cba9bdd",
+        "title": "“Combining Chinese speed with our global system expertise” – Philipp Ibele of Bosch",
+        "summary": "Auto China 2026 closes its doors this weekend, but it has once again showcased many new models and technologies in the field of electromobility. How will developments in China shape Western electric vehicles, automakers, and suppliers in the future? Philipp Ibele worked for Bosch in China for many y…",
+        "url": "https://www.electrive.com/2026/05/02/combining-chinese-speed-with-our-global-system-expertise-philipp-ibele-of-bosch/",
+        "source": "Electrive",
+        "date": "2026-05-02T10:00:00Z",
+        "category": "movilidad",
+        "image": "https://www.electrive.com/media/2026/04/bosch-autonomes-fahren-hintergrund-background-2026-400x267.jpg"
+      },
+      {
         "id": "1f938f1c4b95",
         "title": "Ford’s EV losses narrow to $777M in Q1 2026 amid Model e profitability efforts",
         "summary": "Ford slightly reduced losses in its EV division in Q1 of 2026, but its EV business remains firmly in the red. The company's Model e unit reported a loss of $777 million, an improvement of $72 million compared to the same period last year, as Ford continues working to make its electric cars profitabl…",
@@ -250,16 +260,6 @@
         "date": "2026-04-29T10:00:00Z",
         "category": "movilidad",
         "image": "https://www.electrive.com/media/2026/04/nissan-ariya-wallbox-ladestation-uk-grossbritannien-kennzeichen-400x267.jpeg"
-      },
-      {
-        "id": "c5c5f816bc92",
-        "title": "A first for South Korea: Hyundai trials battery subscription model",
-        "summary": "Hyundai is launching a pilot project in South Korea where electric vehicle batteries can be used on a subscription basis when buying an electric car. Currently, this is only possible in the country with a special dispensation. The pilot project will initially start with taxis but is planned for expa…",
-        "url": "https://www.electrive.com/2026/04/29/a-first-for-south-korea-hyundai-trials-battery-subscription-model/",
-        "source": "Electrive",
-        "date": "2026-04-29T09:20:29Z",
-        "category": "movilidad",
-        "image": "https://www.electrive.com/media/2024/11/hyundai-ioniq-5-schriftzug-2024-400x267.jpg"
       },
       {
         "id": "087fa075e752",
@@ -488,6 +488,16 @@
     ],
     "industria": [
       {
+        "id": "7030452878e0",
+        "title": "Autonomous ‘BumbleB’ shuttle begins campus trials in Stuttgart mobility project",
+        "summary": "An autonomous electric shuttle developed by Bertrandt has entered real-world testing in Stuttgart as part of a Fraunhofer-led research project aimed at rethinking corporate mobility. The electric shuttle, called BumbleB, will operate on a trial basis across the Fraunhofer campus and connect it to a …",
+        "url": "https://www.electrive.com/2026/05/02/autonomous-bumbleb-shuttle-begins-campus-trials-in-stuttgart-mobility-projec/",
+        "source": "Electrive",
+        "date": "2026-05-02T08:00:00Z",
+        "category": "industria",
+        "image": "https://www.electrive.com/media/2026/04/bertrandt-bumbleb-fraunhofer-iao-projekt-izsmo-400x267.jpeg"
+      },
+      {
         "id": "6cb526c6d84e",
         "title": "Autonomous VW buses to begin microtransit service in Florida community",
         "summary": "Beep and Moia plan to expand on-demand and scheduled circulator services throughout the country, Beep&rsquo;s CEO said.",
@@ -706,16 +716,6 @@
         "date": "2026-04-29T09:30:41Z",
         "category": "industria",
         "image": "https://www.electrive.com/media/2026/04/abb-e-mobility-a400-ladestation-dc-hpc-walmart-usa-2026-1-400x267.jpg"
-      },
-      {
-        "id": "c6568f08c6a2",
-        "title": "South Korea: National Police Agency to deploy 500 electric vans",
-        "summary": "Amid rising fuel prices and supply instability, the Korean National Police Agency (KNPA) is accelerating its shift to EVs. The agency plans to deploy 500 electric vans across South Korea.",
-        "url": "https://www.electrive.com/2026/04/28/south-korea-national-police-agency-to-deploy-500-electric-vans/",
-        "source": "Electrive",
-        "date": "2026-04-28T16:30:00Z",
-        "category": "industria",
-        "image": "https://www.electrive.com/media/2026/04/hyundai-staria-electric-front-three-quarter-cropped-400x267.jpeg"
       },
       {
         "id": "2f72d2e3794d",
