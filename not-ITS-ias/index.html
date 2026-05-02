@@ -23,38 +23,15 @@
 
   <!-- ===== HEADER ===== -->
   <header class="header">
-    <div class="header-inner">
-
-      <!-- Izquierda: botón volver + brand -->
-      <div class="header-left">
-        <a href="../" class="btn-back" title="Volver al menú principal">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 18 9 12 15 6"/>
-          </svg>
-          <span>Menú</span>
-        </a>
-        <div class="header-brand">
-          <div class="header-titles">
-            <h1 class="header-name">Not-ITS-ias</h1>
-          </div>
-        </div>
-      </div>
-
-      <!-- Derecha: badge + acciones -->
-      <div class="header-actions">
-        <div class="update-badge" id="updateBadge">
-          <span class="update-dot"></span>
-          <span class="update-time" id="updateTime">—</span>
-        </div>
-        <button class="btn-refresh" id="btnRefresh" title="Actualizar noticias" aria-label="Actualizar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="23 4 23 10 17 10"/>
-            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
-          </svg>
-        </button>
-        <button class="btn-theme" id="btnTheme" title="Cambiar tema" aria-label="Cambiar tema">◐</button>
-      </div>
-
+    <div class="header-content">
+      <a href="../" class="btn-back" title="Volver al menú principal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        <span>Menú</span>
+      </a>
+      <h1 class="app-title">Not-ITS-ias</h1>
+      <button class="theme-toggle" id="btnTheme" title="Cambiar tema" aria-label="Cambiar tema">◐</button>
     </div>
   </header>
 
@@ -106,7 +83,6 @@
       <div class="state-icon">⚠️</div>
       <h2 class="state-title">No se pudo cargar el feed</h2>
       <p class="state-message" id="stateErrorMsg">Verificá tu conexión e intentá de nuevo.</p>
-      <button class="btn-retry" id="btnRetry">Reintentar</button>
     </div>
 
     <!-- Empty state -->
