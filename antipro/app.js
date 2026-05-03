@@ -3,10 +3,10 @@
 // ============================================
 const CONFIG = {
     llmEndpoint: 'https://antipro-llm.juanmacki.workers.dev',
-    llmTimeout: 8000,
-    maxRetries: 1,
+    llmTimeout: 10000,
+    maxRetries: 2,
     minSteps: 3,
-    maxSteps: 6,
+    maxSteps: 12,
 };
 
 // ============================================
