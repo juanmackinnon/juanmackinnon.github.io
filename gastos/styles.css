@@ -714,9 +714,18 @@ form {
   letter-spacing: -0.03em;
 }
 .nav-tabs {
-  min-height: 45px;
+  position: sticky;
+  top: 73px;
+  z-index: 90;
+  display: flex;
+  gap: 0;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
   padding: 0 var(--gap-lg);
-  gap: 2px;
+  max-width: 100%;
 }
 .nav-tab {
   min-height: 44px;
