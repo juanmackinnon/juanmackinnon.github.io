@@ -1,5 +1,5 @@
 /* ============================================================
-   GASTOS APP — app.js  v2
+   GASTOS APP — app.js  v3
    Tema: body.style-light / dark-first (localStorage: 'gastos-theme')
    SW registration: dentro de DOMContentLoaded
    ============================================================ */
@@ -8,7 +8,7 @@
 // DATOS Y ALMACENAMIENTO
 // ============================================================
 
-const STORAGE_KEY  = 'gastos-app-data';
+const STORAGE_KEY   = 'gastos-app-data';
 const STORAGE_THEME = 'gastos-theme';
 
 const DEFAULT_DATA = {
@@ -104,7 +104,7 @@ function toggleTheme() {
 // ============================================================
 
 function mostrarToast(mensaje) {
-  const toast   = document.getElementById('toast');
+  const toast    = document.getElementById('toast');
   const toastMsg = document.getElementById('toast-message');
   toastMsg.textContent = mensaje;
   toast.classList.remove('toast--hidden');
@@ -133,6 +133,49 @@ function mostrarConfirmacion(titulo, mensaje, callback) {
 
   btnCancel.addEventListener('click', onCancel);
   btnConfirm.addEventListener('click', onConfirm);
+}
+
+// ============================================================
+// BIND DELETE BUTTONS — vincula los botones × dentro de un contenedor
+// ============================================================
+
+function bindDeleteButtons(containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
+
+  container.querySelectorAll('.btn-delete[data-tipo]').forEach(btn => {
+    // Clonar para eliminar listeners anteriores
+    const fresh = btn.cloneNode(true);
+    btn.parentNode.replaceChild(fresh, btn);
+
+    fresh.addEventListener('click', (e) => {
+      const id   = e.currentTarget.dataset.id;
+      const tipo = e.currentTarget.dataset.tipo;
+
+      if (tipo === 'gasto') {
+        mostrarConfirmacion('Eliminar gasto', '¿Seguro que querés eliminar este gasto?', (ok) => {
+          if (!ok) return;
+          datos.gastos = datos.gastos.filter(g => g.id !== id);
+          guardarDatos(datos);
+          mostrarToast('Gasto eliminado');
+        });
+      } else if (tipo === 'ingreso') {
+        mostrarConfirmacion('Eliminar ingreso', '¿Seguro que querés eliminar este ingreso?', (ok) => {
+          if (!ok) return;
+          datos.ingresos = datos.ingresos.filter(i => i.id !== id);
+          guardarDatos(datos);
+          mostrarToast('Ingreso eliminado');
+        });
+      } else if (tipo === 'transferencia') {
+        mostrarConfirmacion('Eliminar transferencia', '¿Seguro que querés eliminar esta transferencia?', (ok) => {
+          if (!ok) return;
+          datos.transferencias = datos.transferencias.filter(t => t.id !== id);
+          guardarDatos(datos);
+          mostrarToast('Transferencia eliminada');
+        });
+      }
+    });
+  });
 }
 
 // ============================================================
@@ -182,13 +225,13 @@ function obtenerUltimosMovimientos(limite = 10) {
   const movs = [];
 
   datos.gastos.forEach(g => {
-    const cat   = datos.categorias.find(c => c.id === g.categoriaID);
+    const cat    = datos.categorias.find(c => c.id === g.categoriaID);
     const cuenta = datos.cuentas.find(c => c.id === g.cuentaID);
     movs.push({ ...g, tipo: 'gasto', categoriaNombre: cat?.nombre || 'Sin categoría', cuentaNombre: cuenta?.nombre || 'Sin cuenta' });
   });
 
   datos.ingresos.forEach(i => {
-    const cat   = i.categoriaID ? datos.categorias.find(c => c.id === i.categoriaID) : null;
+    const cat    = i.categoriaID ? datos.categorias.find(c => c.id === i.categoriaID) : null;
     const cuenta = datos.cuentas.find(c => c.id === i.cuentaID);
     movs.push({ ...i, tipo: 'ingreso', categoriaNombre: cat?.nombre || '', cuentaNombre: cuenta?.nombre || 'Sin cuenta' });
   });
@@ -228,16 +271,15 @@ function calcularBalance() {
 }
 
 function actualizarResumen() {
-  // Total unificado por categoría: ingresos suman y gastos restan.
   asegurarCategoriaOtros();
 
   const elCategorias = document.getElementById('categorias-total');
   const catsConMovimiento = datos.categorias
     .map(c => ({
       ...c,
-      gasto: calcularGastoPorCategoria(c.id),
+      gasto:   calcularGastoPorCategoria(c.id),
       ingreso: calcularIngresoPorCategoria(c.id),
-      total: calcularTotalPorCategoria(c.id)
+      total:   calcularTotalPorCategoria(c.id)
     }))
     .filter(c => c.gasto > 0 || c.ingreso > 0)
     .sort((a, b) => Math.abs(b.total) - Math.abs(a.total));
@@ -252,8 +294,8 @@ function actualizarResumen() {
           <span class="categoria-gasto-total ${c.total >= 0 ? 'categoria-ingreso-total' : ''}">${formatoDinero(c.total)}</span>
         </div>`).join('');
 
-  document.getElementById('total-gastos').textContent = formatoDinero(calcularTotalGastos());
-  document.getElementById('total-ingresos').textContent = formatoDinero(calcularTotalIngresos());
+  document.getElementById('total-gastos').textContent    = formatoDinero(calcularTotalGastos());
+  document.getElementById('total-ingresos').textContent  = formatoDinero(calcularTotalIngresos());
   document.getElementById('balance-categorias').textContent = formatoDinero(calcularBalance());
 
   // Últimos movimientos
@@ -268,7 +310,7 @@ function actualizarResumen() {
 }
 
 function renderGraficaCategorias(categorias) {
-  const chart = document.getElementById('categorias-chart');
+  const chart  = document.getElementById('categorias-chart');
   const legend = document.getElementById('categorias-chart-legend');
   if (!chart || !legend) return;
 
@@ -278,7 +320,7 @@ function renderGraficaCategorias(categorias) {
     return;
   }
 
-  const colores = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#f97316', '#64748b', '#ec4899', '#84cc16'];
+  const colores = ['#3b82f6','#10b981','#f59e0b','#ef4444','#8b5cf6','#06b6d4','#f97316','#64748b','#ec4899','#84cc16'];
   const totalAbs = categorias.reduce((s, c) => s + Math.abs(c.total), 0);
 
   if (totalAbs === 0) {
@@ -290,8 +332,8 @@ function renderGraficaCategorias(categorias) {
   let acumulado = 0;
   const segmentos = categorias.map((c, idx) => {
     const inicio = acumulado;
-    const fin = acumulado + (Math.abs(c.total) / totalAbs) * 100;
-    acumulado = fin;
+    const fin    = acumulado + (Math.abs(c.total) / totalAbs) * 100;
+    acumulado    = fin;
     return `${colores[idx % colores.length]} ${inicio.toFixed(2)}% ${fin.toFixed(2)}%`;
   });
 
@@ -306,7 +348,7 @@ function renderGraficaCategorias(categorias) {
 }
 
 function renderMovimiento(m) {
-  const esIngreso = m.tipo === 'ingreso';
+  const esIngreso       = m.tipo === 'ingreso';
   const esTransferencia = m.tipo === 'transferencia';
 
   const descripcion = esTransferencia
@@ -342,13 +384,13 @@ function renderMovimiento(m) {
 
 // --- GASTOS ---
 function actualizarGastos() {
-  const el = document.getElementById('gastos-list');
+  const el    = document.getElementById('gastos-list');
   const items = [...datos.gastos].sort((a, b) => new Date(b.fecha) - new Date(a.fecha)).slice(0, 10);
 
   el.innerHTML = items.length === 0
     ? '<div class="empty-state">Sin gastos aún</div>'
     : items.map(g => {
-        const cat   = datos.categorias.find(c => c.id === g.categoriaID);
+        const cat    = datos.categorias.find(c => c.id === g.categoriaID);
         const cuenta = datos.cuentas.find(c => c.id === g.cuentaID);
         return renderMovimiento({ ...g, tipo: 'gasto', categoriaNombre: cat?.nombre || 'Sin categoría', cuentaNombre: cuenta?.nombre || 'Sin cuenta' });
       }).join('');
@@ -358,13 +400,13 @@ function actualizarGastos() {
 
 // --- INGRESOS ---
 function actualizarIngresos() {
-  const el = document.getElementById('ingresos-list');
+  const el    = document.getElementById('ingresos-list');
   const items = [...datos.ingresos].sort((a, b) => new Date(b.fecha) - new Date(a.fecha)).slice(0, 10);
 
   el.innerHTML = items.length === 0
     ? '<div class="empty-state">Sin ingresos aún</div>'
     : items.map(i => {
-        const cat   = i.categoriaID ? datos.categorias.find(c => c.id === i.categoriaID) : null;
+        const cat    = i.categoriaID ? datos.categorias.find(c => c.id === i.categoriaID) : null;
         const cuenta = datos.cuentas.find(c => c.id === i.cuentaID);
         return renderMovimiento({ ...i, tipo: 'ingreso', categoriaNombre: cat?.nombre || '', cuentaNombre: cuenta?.nombre || 'Sin cuenta' });
       }).join('');
@@ -374,7 +416,7 @@ function actualizarIngresos() {
 
 // --- TRANSFERENCIAS ---
 function actualizarTransferencias() {
-  const el = document.getElementById('transferencias-list');
+  const el    = document.getElementById('transferencias-list');
   const items = [...datos.transferencias].sort((a, b) => new Date(b.fecha) - new Date(a.fecha)).slice(0, 10);
 
   el.innerHTML = items.length === 0
@@ -390,7 +432,7 @@ function actualizarTransferencias() {
 
 // --- CUENTAS ---
 function actualizarCuentas() {
-  const el = document.getElementById('cuentas-list');
+  const el      = document.getElementById('cuentas-list');
   const cuentas = obtenerCuentasConSaldos();
 
   el.innerHTML = cuentas.length === 0
@@ -416,10 +458,10 @@ function handleBorrarCuenta(e) {
   const id = e.currentTarget.dataset.id;
   mostrarConfirmacion('Eliminar cuenta', '¿Seguro? Se perderán todos sus movimientos.', (ok) => {
     if (!ok) return;
-    datos.cuentas         = datos.cuentas.filter(c => c.id !== id);
-    datos.gastos          = datos.gastos.filter(g => g.cuentaID !== id);
-    datos.ingresos        = datos.ingresos.filter(i => i.cuentaID !== id);
-    datos.transferencias  = datos.transferencias.filter(t => t.origenID !== id && t.destinoID !== id);
+    datos.cuentas        = datos.cuentas.filter(c => c.id !== id);
+    datos.gastos         = datos.gastos.filter(g => g.cuentaID !== id);
+    datos.ingresos       = datos.ingresos.filter(i => i.cuentaID !== id);
+    datos.transferencias = datos.transferencias.filter(t => t.origenID !== id && t.destinoID !== id);
     guardarDatos(datos);
     mostrarToast('Cuenta eliminada');
   });
@@ -454,23 +496,19 @@ function handleBorrarCategoria(e) {
     return;
   }
 
-  mostrarConfirmacion('Eliminar categoría', '¿Seguro que querés eliminar esta categoría? Los movimientos asociados pasarán a Otros.', (ok) => {
-    if (!ok) return;
-
-    asegurarCategoriaOtros();
-
-    datos.gastos.forEach(g => {
-      if (g.categoriaID === id) g.categoriaID = 'otros';
-    });
-
-    datos.ingresos.forEach(i => {
-      if (i.categoriaID === id) i.categoriaID = 'otros';
-    });
-
-    datos.categorias = datos.categorias.filter(c => c.id !== id);
-    guardarDatos(datos);
-    mostrarToast('Categoría eliminada. Movimientos asociados pasados a Otros.');
-  });
+  mostrarConfirmacion(
+    'Eliminar categoría',
+    '¿Seguro que querés eliminar esta categoría? Los movimientos asociados pasarán a Otros.',
+    (ok) => {
+      if (!ok) return;
+      asegurarCategoriaOtros();
+      datos.gastos.forEach(g  => { if (g.categoriaID  === id) g.categoriaID  = 'otros'; });
+      datos.ingresos.forEach(i => { if (i.categoriaID === id) i.categoriaID = 'otros'; });
+      datos.categorias = datos.categorias.filter(c => c.id !== id);
+      guardarDatos(datos);
+      mostrarToast('Categoría eliminada. Movimientos asociados pasados a Otros.');
+    }
+  );
 }
 
 // --- SELECTS ---
@@ -503,7 +541,7 @@ function actualizarSelectsCategorias() {
 function actualizarMeses() {
   const sel   = document.getElementById('filter-mes');
   const meses = new Set();
-  datos.gastos.forEach(g => meses.add(obtenerMes(g.fecha)));
+  datos.gastos.forEach(g        => meses.add(obtenerMes(g.fecha)));
   datos.transferencias.forEach(t => meses.add(obtenerMes(t.fecha)));
 
   const opts = Array.from(meses).sort().reverse().map(m => {
@@ -622,17 +660,17 @@ function initForms() {
       datos = {
         ...DEFAULT_DATA,
         gastos: [
-          { id: generarID(), importe: 850,  descripcion: 'Almuerzo en Ámbar',    fecha: '2024-01-15', cuentaID: 'eff', categoriaID: 'comida'  },
-          { id: generarID(), importe: 2400, descripcion: 'Compra Carrefour',     fecha: '2024-01-14', cuentaID: 'deb', categoriaID: 'super'   },
-          { id: generarID(), importe: 450,  descripcion: 'Uber al trabajo',      fecha: '2024-01-13', cuentaID: 'mp',  categoriaID: 'trans'   },
-          { id: generarID(), importe: 5200, descripcion: 'Cena con amigos',      fecha: '2024-01-12', cuentaID: 'deb', categoriaID: 'salidas' },
-          { id: generarID(), importe: 1200, descripcion: 'Farmacia',             fecha: '2024-01-11', cuentaID: 'eff', categoriaID: 'salud'   }
+          { id: generarID(), importe: 850,  descripcion: 'Almuerzo en Ámbar',  fecha: hoy(), cuentaID: 'eff', categoriaID: 'comida'  },
+          { id: generarID(), importe: 2400, descripcion: 'Compra Carrefour',   fecha: hoy(), cuentaID: 'deb', categoriaID: 'super'   },
+          { id: generarID(), importe: 450,  descripcion: 'Uber al trabajo',    fecha: hoy(), cuentaID: 'mp',  categoriaID: 'trans'   },
+          { id: generarID(), importe: 5200, descripcion: 'Cena con amigos',    fecha: hoy(), cuentaID: 'deb', categoriaID: 'salidas' },
+          { id: generarID(), importe: 1200, descripcion: 'Farmacia',           fecha: hoy(), cuentaID: 'eff', categoriaID: 'salud'   }
         ],
         ingresos: [
-          { id: generarID(), importe: 2100, descripcion: 'Devolución cena',      fecha: '2024-01-13', cuentaID: 'deb', categoriaID: 'salidas' }
+          { id: generarID(), importe: 2100, descripcion: 'Devolución cena', fecha: hoy(), cuentaID: 'deb', categoriaID: 'salidas' }
         ],
         transferencias: [
-          { id: generarID(), importe: 1000, origenID: 'deb', destinoID: 'mp',   fecha: '2024-01-10', nota: 'Fondos a Mercado Pago' }
+          { id: generarID(), importe: 1000, origenID: 'deb', destinoID: 'mp', fecha: hoy(), nota: 'Fondos a Mercado Pago' }
         ]
       };
       guardarDatos(datos);
