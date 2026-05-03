@@ -117,18 +117,7 @@ input, textarea, select { -webkit-user-select: text; user-select: text; }
   gap: var(--gap-lg);
 }
 
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: var(--gap-md);
-  flex: 1;
-  min-width: 0;
-}
-
 .app-title {
-  font-size: var(--text-2xl);
-  font-weight: 700;
-  letter-spacing: -0.03em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -178,35 +167,7 @@ input, textarea, select { -webkit-user-select: text; user-select: text; }
 .theme-toggle:active { transform: scale(0.92); }
 
 /* ---- NAV TABS ---- */
-.nav-tabs {
-  display: flex;
-  gap: 0;
-  background-color: var(--bg-surface);
-  border-bottom: 1px solid var(--border);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding: 0 var(--gap-lg);
-  max-width: 100%;
-}
 .nav-tabs::-webkit-scrollbar { display: none; }
-
-.nav-tab {
-  padding: var(--gap-md) var(--gap-lg);
-  border: none;
-  background: transparent;
-  color: var(--text-muted);
-  font-size: var(--text-sm);
-  font-family: var(--font-sans);
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
-  border-bottom: 2px solid transparent;
-  transition: all var(--transition);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  min-height: 44px;
-}
 .nav-tab:hover      { color: var(--text-primary); }
 .nav-tab--active    { color: var(--text-primary); border-bottom-color: var(--accent); }
 
@@ -730,8 +691,16 @@ form {
 .nav-tab {
   min-height: 44px;
   padding: var(--gap-md) var(--gap-lg);
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
   font-size: var(--text-sm);
+  font-family: var(--font-sans);
   font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition);
   text-transform: none;
   letter-spacing: 0;
 }
