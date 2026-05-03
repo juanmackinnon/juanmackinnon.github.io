@@ -15,6 +15,23 @@ const DEFAULT_DATA = {
   cuentas: [
     { id: 'eff', nombre: 'Efectivo',     saldoInicial: 5000  },
     { id: 'deb', nombre: 'Débito BBVA',  saldoInicial: 10000 },
+    { id: 'mp',  nombre: 'Mercado Pago', saldoI/* ============================================================
+   GASTOS APP — app.js  v2
+   Tema: body.style-light / dark-first (localStorage: 'gastos-theme')
+   SW registration: dentro de DOMContentLoaded
+   ============================================================ */
+
+// ============================================================
+// DATOS Y ALMACENAMIENTO
+// ============================================================
+
+const STORAGE_KEY  = 'gastos-app-data';
+const STORAGE_THEME = 'gastos-theme';
+
+const DEFAULT_DATA = {
+  cuentas: [
+    { id: 'eff', nombre: 'Efectivo',     saldoInicial: 5000  },
+    { id: 'deb', nombre: 'Débito BBVA',  saldoInicial: 10000 },
     { id: 'mp',  nombre: 'Mercado Pago', saldoInicial: 2000  }
   ],
   categorias: [
@@ -73,6 +90,12 @@ function escapeHtml(str) {
   const d = document.createElement('div');
   d.textContent = str;
   return d.innerHTML;
+}
+
+function asegurarCategoriaOtros() {
+  if (!datos.categorias.some(c => c.id === 'otros')) {
+    datos.categorias.push({ id: 'otros', nombre: 'Otros' });
+  }
 }
 
 // ============================================================
@@ -223,6 +246,8 @@ function calcularBalance() {
 
 function actualizarResumen() {
   // Total unificado por categoría: ingresos suman y gastos restan.
+  asegurarCategoriaOtros();
+
   const elCategorias = document.getElementById('categorias-total');
   const catsConMovimiento = datos.categorias
     .map(c => ({
@@ -233,6 +258,8 @@ function actualizarResumen() {
     }))
     .filter(c => c.gasto > 0 || c.ingreso > 0)
     .sort((a, b) => Math.abs(b.total) - Math.abs(a.total));
+
+  renderGraficaCategorias(catsConMovimiento);
 
   elCategorias.innerHTML = catsConMovimiento.length === 0
     ? '<div class="empty-state">Sin movimientos por categoría</div>'
@@ -257,71 +284,42 @@ function actualizarResumen() {
   bindDeleteButtons('#ultimos-movimientos');
 }
 
-// --- HELPERS DE RENDER ---
-function renderMovimiento(mov) {
-  if (mov.tipo === 'gasto') {
-    return `
-      <div class="movimiento-item">
-        <div class="movimiento-info">
-          <div class="movimiento-descripcion">${escapeHtml(mov.descripcion)}</div>
-          <div class="movimiento-fecha">${formatoFecha(mov.fecha)}</div>
-          <div class="movimiento-cuenta">${escapeHtml(mov.cuentaNombre)}</div>
-          <div class="movimiento-categoria">${escapeHtml(mov.categoriaNombre)}</div>
-        </div>
-        <div class="movimiento-importe">
-          ${formatoDinero(mov.importe)}
-          <button class="btn-delete" data-id="${mov.id}" data-tipo="gasto" title="Eliminar">×</button>
-        </div>
-      </div>`;
+function renderGraficaCategorias(categorias) {
+  const chart = document.getElementById('categorias-chart');
+  const legend = document.getElementById('categorias-chart-legend');
+  if (!chart || !legend) return;
+
+  if (categorias.length === 0) {
+    chart.style.background = 'var(--bg-card-hover)';
+    legend.innerHTML = '<div class="empty-state">Sin datos para graficar</div>';
+    return;
   }
-  if (mov.tipo === 'ingreso') {
-    return `
-      <div class="movimiento-item">
-        <div class="movimiento-info">
-          <div class="movimiento-descripcion">${escapeHtml(mov.descripcion)}</div>
-          <div class="movimiento-fecha">${formatoFecha(mov.fecha)}</div>
-          <div class="movimiento-cuenta">${escapeHtml(mov.cuentaNombre)}</div>
-          ${mov.categoriaNombre ? `<div class="movimiento-categoria">${escapeHtml(mov.categoriaNombre)}</div>` : ''}
-        </div>
-        <div class="movimiento-importe movimiento-importe--ingreso">
-          +${formatoDinero(mov.importe)}
-          <button class="btn-delete" data-id="${mov.id}" data-tipo="ingreso" title="Eliminar">×</button>
-        </div>
-      </div>`;
+
+  const colores = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#f97316', '#64748b', '#ec4899', '#84cc16'];
+  const totalAbs = categorias.reduce((s, c) => s + Math.abs(c.total), 0);
+
+  if (totalAbs === 0) {
+    chart.style.background = 'var(--bg-card-hover)';
+    legend.innerHTML = '<div class="empty-state">Sin diferencia neta por categoría</div>';
+    return;
   }
-  // transferencia
-  return `
-    <div class="movimiento-item">
-      <div class="movimiento-info">
-        <div class="movimiento-descripcion">${escapeHtml(mov.nota || 'Transferencia')}</div>
-        <div class="movimiento-fecha">${formatoFecha(mov.fecha)}</div>
-        <div class="movimiento-cuenta">${escapeHtml(mov.origenNombre)} → ${escapeHtml(mov.destinoNombre)}</div>
-      </div>
-      <div class="movimiento-importe movimiento-importe--transfer">
-        ${formatoDinero(mov.importe)}
-        <button class="btn-delete" data-id="${mov.id}" data-tipo="transferencia" title="Eliminar">×</button>
-      </div>
-    </div>`;
-}
 
-function bindDeleteButtons(scope) {
-  document.querySelectorAll(`${scope} .btn-delete`).forEach(btn => {
-    btn.addEventListener('click', handleBorrar);
+  let acumulado = 0;
+  const segmentos = categorias.map((c, idx) => {
+    const inicio = acumulado;
+    const fin = acumulado + (Math.abs(c.total) / totalAbs) * 100;
+    acumulado = fin;
+    return `${colores[idx % colores.length]} ${inicio.toFixed(2)}% ${fin.toFixed(2)}%`;
   });
-}
 
-function handleBorrar(e) {
-  const id   = e.currentTarget.dataset.id;
-  const tipo = e.currentTarget.dataset.tipo;
-
-  mostrarConfirmacion('Eliminar movimiento', '¿Seguro que querés eliminar este movimiento?', (ok) => {
-    if (!ok) return;
-    if (tipo === 'gasto')         datos.gastos         = datos.gastos.filter(g => g.id !== id);
-    if (tipo === 'ingreso')       datos.ingresos       = datos.ingresos.filter(i => i.id !== id);
-    if (tipo === 'transferencia') datos.transferencias = datos.transferencias.filter(t => t.id !== id);
-    guardarDatos(datos);
-    mostrarToast('Movimiento eliminado');
-  });
+  chart.style.background = `conic-gradient(${segmentos.join(', ')})`;
+  legend.innerHTML = categorias.map((c, idx) => `
+    <div class="chart-legend-item">
+      <span class="chart-legend-dot" style="background:${colores[idx % colores.length]}"></span>
+      <span class="chart-legend-name">${escapeHtml(c.nombre)}</span>
+      <span class="chart-legend-value ${c.total >= 0 ? 'categoria-ingreso-total' : ''}">${formatoDinero(c.total)}</span>
+    </div>
+  `).join('');
 }
 
 // --- GASTOS ---
@@ -411,6 +409,8 @@ function handleBorrarCuenta(e) {
 
 // --- CATEGORÍAS ---
 function actualizarCategorias() {
+  asegurarCategoriaOtros();
+
   const el = document.getElementById('categorias-list');
 
   el.innerHTML = datos.categorias.length === 0
@@ -418,7 +418,9 @@ function actualizarCategorias() {
     : datos.categorias.map(c => `
         <div class="categoria-item">
           <div class="categoria-nombre">${escapeHtml(c.nombre)}</div>
-          <button class="btn-delete" data-id="${c.id}" data-tipo="categoria" title="Eliminar">×</button>
+          ${c.id === 'otros'
+            ? '<span class="categoria-fija">Fija</span>'
+            : `<button class="btn-delete" data-id="${c.id}" data-tipo="categoria" title="Eliminar">×</button>`}
         </div>`).join('');
 
   document.querySelectorAll('#categorias-list .btn-delete').forEach(btn => {
@@ -428,12 +430,28 @@ function actualizarCategorias() {
 
 function handleBorrarCategoria(e) {
   const id = e.currentTarget.dataset.id;
-  mostrarConfirmacion('Eliminar categoría', '¿Seguro que querés eliminar esta categoría?', (ok) => {
+
+  if (id === 'otros') {
+    mostrarToast('La categoría Otros no se puede eliminar');
+    return;
+  }
+
+  mostrarConfirmacion('Eliminar categoría', '¿Seguro que querés eliminar esta categoría? Los movimientos asociados pasarán a Otros.', (ok) => {
     if (!ok) return;
+
+    asegurarCategoriaOtros();
+
+    datos.gastos.forEach(g => {
+      if (g.categoriaID === id) g.categoriaID = 'otros';
+    });
+
+    datos.ingresos.forEach(i => {
+      if (i.categoriaID === id) i.categoriaID = 'otros';
+    });
+
     datos.categorias = datos.categorias.filter(c => c.id !== id);
-    datos.gastos     = datos.gastos.filter(g => g.categoriaID !== id);
     guardarDatos(datos);
-    mostrarToast('Categoría eliminada');
+    mostrarToast('Categoría eliminada. Movimientos asociados pasados a Otros.');
   });
 }
 
