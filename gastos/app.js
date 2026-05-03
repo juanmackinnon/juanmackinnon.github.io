@@ -15,23 +15,6 @@ const DEFAULT_DATA = {
   cuentas: [
     { id: 'eff', nombre: 'Efectivo',     saldoInicial: 5000  },
     { id: 'deb', nombre: 'Débito BBVA',  saldoInicial: 10000 },
-    { id: 'mp',  nombre: 'Mercado Pago', saldoI/* ============================================================
-   GASTOS APP — app.js  v2
-   Tema: body.style-light / dark-first (localStorage: 'gastos-theme')
-   SW registration: dentro de DOMContentLoaded
-   ============================================================ */
-
-// ============================================================
-// DATOS Y ALMACENAMIENTO
-// ============================================================
-
-const STORAGE_KEY  = 'gastos-app-data';
-const STORAGE_THEME = 'gastos-theme';
-
-const DEFAULT_DATA = {
-  cuentas: [
-    { id: 'eff', nombre: 'Efectivo',     saldoInicial: 5000  },
-    { id: 'deb', nombre: 'Débito BBVA',  saldoInicial: 10000 },
     { id: 'mp',  nombre: 'Mercado Pago', saldoInicial: 2000  }
   ],
   categorias: [
@@ -320,6 +303,41 @@ function renderGraficaCategorias(categorias) {
       <span class="chart-legend-value ${c.total >= 0 ? 'categoria-ingreso-total' : ''}">${formatoDinero(c.total)}</span>
     </div>
   `).join('');
+}
+
+function renderMovimiento(m) {
+  const esIngreso = m.tipo === 'ingreso';
+  const esTransferencia = m.tipo === 'transferencia';
+
+  const descripcion = esTransferencia
+    ? `Transferencia: ${m.origenNombre} → ${m.destinoNombre}`
+    : m.descripcion;
+
+  const detalle = esTransferencia
+    ? (m.nota || 'Sin nota')
+    : [m.cuentaNombre, m.categoriaNombre].filter(Boolean).join(' · ');
+
+  const importeClass = esIngreso
+    ? 'movimiento-importe movimiento-importe--ingreso'
+    : esTransferencia
+      ? 'movimiento-importe movimiento-importe--transfer'
+      : 'movimiento-importe';
+
+  const signo = esIngreso ? '+' : esTransferencia ? '' : '-';
+
+  return `
+    <div class="movimiento-item">
+      <div class="movimiento-info">
+        <div class="movimiento-descripcion">${escapeHtml(descripcion || 'Sin descripción')}</div>
+        <div class="movimiento-fecha">${formatoFecha(m.fecha)}</div>
+        ${detalle ? `<div class="movimiento-categoria">${escapeHtml(detalle)}</div>` : ''}
+      </div>
+      <div class="${importeClass}">
+        ${signo}${formatoDinero(m.importe)}
+        <button class="btn-delete" data-id="${m.id}" data-tipo="${m.tipo}" title="Eliminar">×</button>
+      </div>
+    </div>
+  `;
 }
 
 // --- GASTOS ---
