@@ -198,20 +198,6 @@ a:hover { text-decoration: underline; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ---- CATEGORY NAV ---- */
-.category-nav {
-  background-color: var(--bg-surface);
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  gap: 2px;
-  padding: 0 8px;
-  max-width: 100%;
-}
-
-.category-nav::-webkit-scrollbar { display: none; }
-
 .cat-tab {
   display: flex;
   align-items: center;
@@ -822,6 +808,9 @@ a:hover { text-decoration: underline; }
 .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 .theme-toggle:active { transform: scale(0.92); }
 .category-nav {
+  position: sticky;
+  top: 69px;
+  z-index: 190;
   min-height: 45px;
   background-color: var(--bg-surface);
   border-bottom: 1px solid var(--border);
